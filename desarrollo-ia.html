@@ -1,38 +1,568 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Desarrollo de software con IA · Pixel Host</title>
-<meta name="description" content="Un asistente de inteligencia artificial que acompaña a su equipo en todo el ciclo de desarrollo: código, revisión, pruebas y documentación.">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>Desarrollo de sistemas e IA · Pixel Host</title>
+  <meta name="description" content="Desarrollo de sistemas empresariales y aplicaciones de inteligencia artificial, con apoyo para su despliegue en infraestructura dedicada.">
+
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Ajustes exclusivos de esta página. */
+    #resumen,
+    #como-funciona,
+    #preguntas {
+      scroll-margin-top: 72px;
+    }
+
+    .ia-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      margin-top: 32px;
+      font-size: 14px;
+    }
+
+    .ia-nav a {
+      color: #c6c6c6;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #525252;
+    }
+
+    .ia-nav a:hover {
+      color: #fff;
+      border-color: #78a9ff;
+    }
+
+    .ia-page .btn {
+      background: #0f62fe;
+      color: #fff;
+    }
+
+    .ia-page .btn:hover {
+      background: #0050e6;
+    }
+
+    .ia-page .cta .btn {
+      background: #fff;
+      color: #0043ce;
+    }
+
+    .ia-page .cta .btn:hover {
+      background: #e8e8e8;
+    }
+
+    /* Portada de Desarrollo e IA con imagen */
+    .ia-page .ia-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 48px;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    .ia-page .ia-hero-content {
+      min-width: 0;
+    }
+
+    .ia-page .ia-hero-content .kick {
+      margin-top: 24px;
+    }
+
+    .ia-page .ia-hero-content h1 {
+      max-width: 100%;
+    }
+
+    .ia-page .ia-hero-content p:not(.kick) {
+      max-width: 100%;
+    }
+
+    .ia-page .ia-hero-media {
+      min-width: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ia-page .ia-hero-media img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1536 / 1024;
+      object-fit: contain;
+      border: 1px solid #393939;
+    }
+
+    @media (max-width: 960px) {
+      .ia-page .ia-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    /* Iconos SVG de las seis tarjetas de servicios */
+    .ia-page #funciones .pts > div::before {
+      display: none;
+    }
+
+    .ia-page .ia-card-icon {
+      display: block;
+      width: 32px;
+      height: 32px;
+      color: var(--blue);
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
+  </style>
 </head>
-<body>
-<header class="mast">
-<div class="wrap"><div class="bar">
-<button class="burger" aria-label="Abrir menú" id="bg">Menú</button>
-<a class="logo" href="index.html">Pixel Host</a>
-<nav class="menu" id="menu" aria-label="Principal">
-<button aria-expanded="false" aria-controls="m1">Soluciones ▾</button>
-<a href="nosotros.html">Nosotros</a><a href="soporte.html">Soporte</a><a href="contacto.html">Contacto</a>
-</nav>
-<div class="tools"><a class="hide" href="libro-de-reclamaciones.html">Libro de Reclamaciones</a></div>
-</div></div>
-<div class="mega" id="m1"><div class="wrap"><div><b>Seguridad con IA</b><a href="deteccion-armamentos.html">Resumen</a><a href="deteccion-armamentos.html#como-funciona">Cómo funciona</a><a href="deteccion-armamentos.html#preguntas">Preguntas frecuentes</a></div><div><b>Desarrollo con IA</b><a href="desarrollo-ia.html">Resumen</a><a href="desarrollo-ia.html#como-funciona">Cómo funciona</a><a href="desarrollo-ia.html#preguntas">Preguntas frecuentes</a></div><div><b>Telemetría</b><a href="telemetria.html">Resumen</a><a href="telemetria.html#como-funciona">Cómo funciona</a><a href="telemetria.html#preguntas">Preguntas frecuentes</a></div><div><b>Flotas y activos</b><a href="flotas-activos.html">Resumen</a><a href="flotas-activos.html#como-funciona">Cómo funciona</a><a href="flotas-activos.html#preguntas">Preguntas frecuentes</a></div></div></div>
-</header>
-<main><div class="phero"><div class="wrap"><nav class="crumb" aria-label="Ruta"><a href="index.html">Inicio</a> / Desarrollo de software con IA</nav><p class="kick">Desarrollo con IA</p><h1>Escriba, revise y pruebe código más rápido</h1><p>Un asistente de inteligencia artificial que acompaña a su equipo en todo el ciclo de desarrollo: código, revisión, pruebas y documentación.</p><a class="btn" href="contacto.html">Solicitar demostración <span>→</span></a></div></div><section id="funciones" class="layer"><div class="wrap"><h2>Qué incluye</h2><div class="pts c3"><div><h3>Asistente de código</h3><p>Sugiere y completa código dentro del editor que su equipo ya usa.</p></div><div><h3>Revisión automática</h3><p>Analiza los cambios y señala errores y mejoras antes de la revisión humana.</p></div><div><h3>Generación de pruebas</h3><p>Propone pruebas para el código nuevo y el existente.</p></div><div><h3>Documentación al día</h3><p>Redacta y actualiza la documentación a partir del código.</p></div><div><h3>Integración con repositorios</h3><p>Se conecta con los flujos de trabajo de su equipo.</p></div><div><h3>Control de privacidad</h3><p>Usted define qué código puede analizarse y cómo se trata.</p></div></div></div></section><section id="como-funciona"><div class="wrap"><h2>Cómo funciona</h2><div class="pts steps"><div><h3>Paso 1</h3><p>Conecte su repositorio y su editor.</p></div><div><h3>Paso 2</h3><p>Elija qué tareas apoyará el asistente.</p></div><div><h3>Paso 3</h3><p>El asistente propone cambios y pruebas.</p></div><div><h3>Paso 4</h3><p>Su equipo revisa y aprueba todo.</p></div></div></div></section><section class="layer"><div class="wrap two"><div><h2>Para quién es</h2></div><ul class="tick"><li>Equipos de ingeniería</li><li>Software empresarial</li><li>Startups y agencias</li><li>Áreas de TI de cualquier industria</li></ul></div></section><section id="preguntas"><div class="wrap two"><div><h2>Preguntas frecuentes</h2></div><div><details><summary>¿Mi código se comparte con terceros?</summary><p>Se trata según lo acordado en el contrato y en nuestra Política de Privacidad. Conversamos opciones en la demostración.</p></details><details><summary>¿Reemplaza a mis desarrolladores?</summary><p>No. Acelera tareas repetitivas, pero las decisiones y la aprobación final son de su equipo.</p></details><details><summary>¿Qué lenguajes soporta?</summary><p>Los más usados. Confirmamos la compatibilidad con su tecnología en la demostración.</p></details></div></div></section><div class="cta"><div class="wrap"><h2>Solicite una demostración de 30 minutos</h2><a class="btn" href="contacto.html">Agendar demostración <span>→</span></a></div></div></main>
-<footer><div class="wrap">
-<div class="loc"><span>Pixel Host</span><a href="#" style="padding:0">Perú / Español</a></div>
-<div class="cols">
-<div><b>Soluciones</b><a href="deteccion-armamentos.html">Detección de armamentos por IA</a><a href="desarrollo-ia.html">Desarrollo de software con IA</a><a href="telemetria.html">Telemetría</a><a href="flotas-activos.html">Flotas y activos</a></div>
-<div><b>Empresa</b><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div>
-<div><b>Soporte</b><a href="soporte.html">Centro de ayuda</a><a href="contacto.html">Escríbanos</a></div>
-<div><b>Legal</b><a href="privacidad.html">Política de Privacidad</a><a href="terminos.html">Términos y Condiciones</a><a href="libro-de-reclamaciones.html">Libro de Reclamaciones</a></div>
-<div><b>Contacto</b><a href="mailto:contacto@pixelhost.example">contacto@pixelhost.example</a><a href="#">+51 000 000 000</a><a href="#">Lima, Perú</a></div>
-</div>
-<div class="legal"><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a class="libro" href="libro-de-reclamaciones.html">Libro de Reclamaciones</a><span>© 2026 Pixel Host. Todos los derechos reservados.</span></div>
-</div></footer>
-<script src="script.js"></script>
+
+<body class="ia-page">
+  <header class="mast">
+    <div class="wrap">
+      <div class="bar">
+        <button class="burger" aria-label="Abrir menú" id="bg">
+          Menú
+        </button>
+
+        <a class="logo" href="index.html">Pixel Host</a>
+
+        <nav class="menu" id="menu" aria-label="Principal">
+          <button aria-expanded="false" aria-controls="m1">
+            Soluciones ▾
+          </button>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="soporte.html">Soporte</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <div class="tools">
+          <a class="hide" href="libro-de-reclamaciones.html">
+            Libro de Reclamaciones
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mega" id="m1">
+      <div class="wrap">
+        <div>
+          <b>Seguridad con IA</b>
+          <a href="deteccion-armamentos.html">Resumen</a>
+          <a href="deteccion-armamentos.html#como-funciona">
+            Cómo funciona
+          </a>
+          <a href="deteccion-armamentos.html#preguntas">
+            Preguntas frecuentes
+          </a>
+        </div>
+
+        <div>
+          <b>Desarrollo con IA</b>
+          <a href="desarrollo-ia.html#resumen">Resumen</a>
+          <a href="desarrollo-ia.html#como-funciona">
+            Cómo funciona
+          </a>
+          <a href="desarrollo-ia.html#preguntas">
+            Preguntas frecuentes
+          </a>
+        </div>
+
+        <div>
+          <b>Telemetría</b>
+          <a href="telemetria.html">Resumen</a>
+          <a href="telemetria.html#como-funciona">Cómo funciona</a>
+          <a href="telemetria.html#preguntas">Preguntas frecuentes</a>
+        </div>
+
+        <div>
+          <b>Flotas y activos</b>
+          <a href="flotas-activos.html">Resumen</a>
+          <a href="flotas-activos.html#como-funciona">
+            Cómo funciona
+          </a>
+          <a href="flotas-activos.html#preguntas">
+            Preguntas frecuentes
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Resumen -->
+    <div class="phero" id="resumen">
+      <div class="wrap">
+        <nav class="crumb" aria-label="Ruta">
+          <a href="index.html">Inicio</a> /
+          Desarrollo de sistemas e IA
+        </nav>
+
+        <div class="ia-hero-grid">
+          <div class="ia-hero-content">
+            <p class="kick">Desarrollo con IA</p>
+
+            <h1>Sistemas e inteligencia artificial para su empresa</h1>
+
+            <p>
+              Desarrollamos sistemas empresariales y aplicaciones de
+              inteligencia artificial según las necesidades de su negocio.
+              Apoyamos su implementación y despliegue en infraestructura
+              dedicada.
+            </p>
+
+            <a class="btn" href="contacto.html">
+              Cuéntenos su proyecto <span aria-hidden="true">→</span>
+            </a>
+
+            <nav class="ia-nav" aria-label="Secciones de Desarrollo con IA">
+              <a href="#funciones">Qué podemos desarrollar</a>
+              <a href="#como-funciona">Cómo funciona</a>
+              <a href="#preguntas">Preguntas frecuentes</a>
+            </nav>
+          </div>
+
+          <div class="ia-hero-media">
+            <img src="Media/desarrollo-ia.png" alt="Desarrollo de sistemas e inteligencia artificial para empresas" width="1536" height="1024">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="funciones" class="layer">
+      <div class="wrap">
+        <h2>Qué podemos desarrollar</h2>
+
+        <p class="lead">
+          Elegimos la tecnología según el proceso que necesita mejorar
+          y la información disponible.
+        </p>
+
+        <div class="pts c3">
+          <div>
+            <svg class="ia-card-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="7" y1="6.5" x2="7.01" y2="6.5"></line>
+              <line x1="10" y1="6.5" x2="10.01" y2="6.5"></line>
+              <line x1="7" y1="13" x2="13" y2="13"></line>
+              <line x1="7" y1="16" x2="10" y2="16"></line>
+            </svg>
+            <h3>Sistemas empresariales</h3>
+            <p>
+              Aplicaciones para organizar información y gestionar
+              procesos internos, utilizando frameworks de uso
+              extendido en la industria.
+            </p>
+          </div>
+
+          <div>
+            <svg class="ia-card-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 9V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2v3l3.5-3H12a2 2 0 0 0 2-2z"></path>
+              <path d="M18 9h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2v3l-3.5-3H11a2 2 0 0 1-2-2v-1"></path>
+            </svg>
+            <h3>Asistentes con IA</h3>
+            <p>
+              Soluciones con modelos de lenguaje (LLM) y RAG para
+              consultar documentos y responder preguntas a partir
+              de información del negocio.
+            </p>
+          </div>
+
+          <div>
+            <svg class="ia-card-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"></path>
+              <polyline points="14 3 14 8 19 8"></polyline>
+              <line x1="2" y1="13" x2="22" y2="13"></line>
+              <polyline points="4 11 2 13 4 15"></polyline>
+              <polyline points="20 11 22 13 20 15"></polyline>
+              <line x1="10" y1="17" x2="15" y2="17"></line>
+            </svg>
+            <h3>Lectura de documentos</h3>
+            <p>
+              Aplicaciones con reconocimiento óptico de caracteres
+              (OCR) para extraer texto de imágenes y documentos
+              digitalizados.
+            </p>
+          </div>
+
+          <div>
+            <svg class="ia-card-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 8V5a2 2 0 0 1 2-2h3"></path>
+              <path d="M16 3h3a2 2 0 0 1 2 2v3"></path>
+              <path d="M3 16v3a2 2 0 0 0 2 2h3"></path>
+              <path d="M16 21h3a2 2 0 0 0 2-2v-3"></path>
+              <circle cx="12" cy="12" r="3.5"></circle>
+            </svg>
+            <h3>Visión por computadora</h3>
+            <p>
+              Análisis de imágenes y video para identificar objetos
+              o eventos definidos según el uso de la aplicación.
+            </p>
+          </div>
+
+          <div>
+            <svg class="ia-card-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="20" x2="21" y2="20"></line>
+              <rect x="5" y="13" width="3" height="7" rx="0.5"></rect>
+              <rect x="10.5" y="8" width="3" height="12" rx="0.5"></rect>
+              <rect x="16" y="4" width="3" height="16" rx="0.5"></rect>
+            </svg>
+            <h3>Análisis de datos</h3>
+            <p>
+              Modelos de aprendizaje automático y redes neuronales
+              para reconocer patrones, clasificar información
+              y apoyar el análisis de datos.
+            </p>
+          </div>
+
+          <div>
+            <svg class="ia-card-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="4" y1="6" x2="20" y2="6"></line>
+              <line x1="4" y1="10" x2="15" y2="10"></line>
+              <line x1="4" y1="14" x2="20" y2="14"></line>
+              <line x1="4" y1="18" x2="12" y2="18"></line>
+            </svg>
+            <h3>Procesamiento de lenguaje</h3>
+            <p>
+              Aplicaciones para analizar textos, clasificar mensajes
+              y organizar información escrita mediante técnicas
+              de procesamiento de lenguaje natural.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section id="como-funciona">
+      <div class="wrap">
+        <h2>Cómo funciona</h2>
+
+        <p class="lead">
+          Partimos de una necesidad concreta y definimos el alcance
+          antes de desarrollar la solución.
+        </p>
+
+        <div class="pts steps">
+          <div>
+            <h3>Conocer su necesidad</h3>
+            <p>
+              Revisamos el proceso que desea mejorar, quién utilizará
+              el sistema y qué información está disponible.
+            </p>
+          </div>
+
+          <div>
+            <h3>Definir la solución</h3>
+            <p>
+              Proponemos las funciones, la tecnología y los requisitos
+              de infraestructura según el alcance acordado.
+            </p>
+          </div>
+
+          <div>
+            <h3>Desarrollar y probar</h3>
+            <p>
+              Construimos la aplicación y comprobamos su funcionamiento
+              con casos de prueba relacionados con el proceso.
+            </p>
+          </div>
+
+          <div>
+            <h3>Preparar el despliegue</h3>
+            <p>
+              Apoyamos la instalación y configuración en la
+              infraestructura dedicada definida para el proyecto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="layer">
+      <div class="wrap two">
+        <div>
+          <h2>Para quién es</h2>
+          <p class="lead2">
+            Para empresas y equipos que buscan desarrollar un sistema
+            o incorporar inteligencia artificial en sus procesos.
+          </p>
+        </div>
+
+        <ul class="tick">
+          <li>Negocios que necesitan sistemas a medida</li>
+          <li>Equipos que consultan documentos internos</li>
+          <li>Áreas que procesan imágenes o textos</li>
+          <li>Empresas que necesitan analizar sus datos</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Preguntas frecuentes -->
+    <section id="preguntas">
+      <div class="wrap two">
+        <div>
+          <h2>Preguntas frecuentes</h2>
+          <p class="lead2">
+            Algunas dudas antes de iniciar un proyecto.
+          </p>
+        </div>
+
+        <div>
+          <details>
+            <summary>¿Qué necesito para empezar?</summary>
+            <p>
+              Una descripción del problema que desea resolver y del
+              proceso actual. Si cuenta con documentos, datos o un
+              sistema existente, esa información ayudará a evaluar
+              la propuesta.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Todos los sistemas necesitan IA?</summary>
+            <p>
+              No. La tecnología se elige según la necesidad.
+              Algunos procesos se resuelven con un sistema empresarial;
+              otros pueden beneficiarse de funciones de inteligencia
+              artificial.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Se puede integrar con un sistema existente?</summary>
+            <p>
+              La posibilidad de integración depende de la tecnología,
+              los accesos y las interfaces disponibles. Estos puntos
+              se revisan antes de definir el alcance.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Qué pasa si todavía no tengo datos?</summary>
+            <p>
+              Primero se identifica qué información necesita la
+              solución. Para un prototipo pueden evaluarse datos de
+              ejemplo; las pruebas con información real se planifican
+              según el objetivo del proyecto.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Dónde se instalará la aplicación?</summary>
+            <p>
+              La infraestructura se define según los requisitos del
+              sistema. El servicio contempla apoyo para el despliegue
+              de aplicaciones de IA en infraestructura dedicada.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Cuánto cuesta y cuánto tiempo demora?</summary>
+            <p>
+              Depende de las funciones, las integraciones y la
+              complejidad del proyecto. El presupuesto y el plazo
+              se establecen después de revisar los requerimientos.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Cómo se manejará la información de mi empresa?</summary>
+            <p>
+              Antes de utilizar información del negocio, se deben
+              acordar los permisos de acceso, el almacenamiento
+              y las condiciones de uso de los datos.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Qué soporte incluye el proyecto?</summary>
+            <p>
+              El texto del servicio contempla apoyo para el despliegue.
+              El mantenimiento, las actualizaciones y el soporte
+              posterior se definen en la propuesta de cada proyecto.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta">
+      <div class="wrap">
+        <h2>Conversemos sobre su próximo sistema</h2>
+
+        <a class="btn" href="contacto.html">
+          Contactar al equipo <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="loc">
+        <span>Pixel Host</span>
+        <a href="#" style="padding:0">Perú / Español</a>
+      </div>
+
+      <div class="cols">
+        <div>
+          <b>Soluciones</b>
+          <a href="deteccion-armamentos.html">
+            Detección de armamentos por IA
+          </a>
+          <a href="desarrollo-ia.html">Desarrollo de sistemas e IA</a>
+          <a href="telemetria.html">Telemetría</a>
+          <a href="flotas-activos.html">Flotas y activos</a>
+        </div>
+
+        <div>
+          <b>Empresa</b>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+
+        <div>
+          <b>Soporte</b>
+          <a href="soporte.html">Centro de ayuda</a>
+          <a href="contacto.html">Escríbanos</a>
+        </div>
+
+        <div>
+          <b>Legal</b>
+          <a href="privacidad.html">Política de Privacidad</a>
+          <a href="terminos.html">Términos y Condiciones</a>
+          <a href="libro-de-reclamaciones.html">
+            Libro de Reclamaciones
+          </a>
+        </div>
+
+        <div>
+          <b>Contacto</b>
+          <a href="mailto:contacto@pixelhost.example">
+            contacto@pixelhost.example
+          </a>
+          <a href="#">+51 000 000 000</a>
+          <a href="#">Lima, Perú</a>
+        </div>
+      </div>
+
+      <div class="legal">
+        <a href="privacidad.html">Privacidad</a>
+        <a href="terminos.html">Términos</a>
+        <a class="libro" href="libro-de-reclamaciones.html">
+          Libro de Reclamaciones
+        </a>
+        <span>
+          © 2026 Pixel Host. Todos los derechos reservados.
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
