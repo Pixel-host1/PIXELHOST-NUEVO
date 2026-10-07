@@ -20,7 +20,7 @@ var cf=document.querySelector('[data-form="contacto"]');
 if(cf)cf.addEventListener('submit',function(e){
 e.preventDefault();if(!cf.reportValidity())return;
 var d=new FormData(cf),body='Nombre: '+d.get('nombre')+'\nCorreo: '+d.get('correo')+'\nTeléfono: '+(d.get('tel')||'-')+'\nEmpresa: '+(d.get('empresa')||'-')+'\nInterés: '+d.get('interes')+'\n\n'+d.get('msg');
-document.getElementById('cmail').href='mailto:contacto@meridian.example?subject='+encodeURIComponent('Consulta: '+d.get('interes'))+'&body='+encodeURIComponent(body);
+document.getElementById('cmail').href='mailto:contacto@pixelhost.example?subject='+encodeURIComponent('Consulta: '+d.get('interes'))+'&body='+encodeURIComponent(body);
 document.getElementById('cres').classList.add('on');
 });
 
@@ -37,7 +37,7 @@ if(menor.checked)rows.push(['Padre, madre o tutor',d.get('tutor')]);
 rows.push(['Bien contratado',d.get('bien')],['Monto reclamado (S/)',d.get('monto')||'-'],['Descripción',d.get('desc')],['Tipo',d.get('tipo')],['Detalle',d.get('detalle')],['Pedido del consumidor',d.get('pedido')],['Observaciones del proveedor','A completar por el proveedor']);
 var dl=document.getElementById('lres-dl'),txt='';dl.textContent='';
 rows.forEach(function(r){var a=document.createElement('dt'),b=document.createElement('dd');a.textContent=r[0];b.textContent=r[1];dl.appendChild(a);dl.appendChild(b);txt+=r[0]+': '+r[1]+'\n'});
-document.getElementById('lmail').href='mailto:'+encodeURIComponent(d.get('mail'))+'?cc=contacto@meridian.example&subject='+encodeURIComponent('Hoja de Reclamación '+n)+'&body='+encodeURIComponent(txt);
+document.getElementById('lmail').href='mailto:'+encodeURIComponent(d.get('mail'))+'?cc=contacto@pixelhost.example&subject='+encodeURIComponent('Hoja de Reclamación '+n)+'&body='+encodeURIComponent(txt);
 lf.hidden=true;document.getElementById('lres').classList.add('on');window.scrollTo(0,0);
 });
 document.getElementById('lprint').addEventListener('click',function(){window.print()});
