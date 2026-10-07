@@ -1,38 +1,461 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Desarrollo de software con IA · Meridian Systems</title>
-<meta name="description" content="Un asistente de inteligencia artificial que acompaña a su equipo en todo el ciclo de desarrollo: código, revisión, pruebas y documentación.">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>Desarrollo de sistemas e IA · Meridian Systems</title>
+  <meta name="description" content="Desarrollo de sistemas empresariales y aplicaciones de inteligencia artificial, con apoyo para su despliegue en infraestructura dedicada.">
+
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Ajustes exclusivos de esta página. */
+    #resumen,
+    #como-funciona,
+    #preguntas {
+      scroll-margin-top: 72px;
+    }
+
+    .ia-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      margin-top: 32px;
+      font-size: 14px;
+    }
+
+    .ia-nav a {
+      color: #c6c6c6;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #525252;
+    }
+
+    .ia-nav a:hover {
+      color: #fff;
+      border-color: #78a9ff;
+    }
+
+    .ia-page .btn {
+      background: #0f62fe;
+      color: #fff;
+    }
+
+    .ia-page .btn:hover {
+      background: #0050e6;
+    }
+
+    .ia-page .cta .btn {
+      background: #fff;
+      color: #0043ce;
+    }
+
+    .ia-page .cta .btn:hover {
+      background: #e8e8e8;
+    }
+  </style>
 </head>
-<body>
-<header class="mast">
-<div class="wrap"><div class="bar">
-<button class="burger" aria-label="Abrir menú" id="bg">Menú</button>
-<a class="logo" href="index.html">Meridian</a>
-<nav class="menu" id="menu" aria-label="Principal">
-<button aria-expanded="false" aria-controls="m1">Soluciones ▾</button>
-<a href="nosotros.html">Nosotros</a><a href="soporte.html">Soporte</a><a href="contacto.html">Contacto</a>
-</nav>
-<div class="tools"><a class="hide" href="libro-de-reclamaciones.html">Libro de Reclamaciones</a><a href="#">Iniciar sesión</a></div>
-</div></div>
-<div class="mega" id="m1"><div class="wrap"><div><b>Seguridad con IA</b><a href="deteccion-armamentos.html">Resumen</a><a href="deteccion-armamentos.html#como-funciona">Cómo funciona</a><a href="deteccion-armamentos.html#preguntas">Preguntas frecuentes</a></div><div><b>Desarrollo con IA</b><a href="desarrollo-ia.html">Resumen</a><a href="desarrollo-ia.html#como-funciona">Cómo funciona</a><a href="desarrollo-ia.html#preguntas">Preguntas frecuentes</a></div><div><b>Telemetría</b><a href="telemetria.html">Resumen</a><a href="telemetria.html#como-funciona">Cómo funciona</a><a href="telemetria.html#preguntas">Preguntas frecuentes</a></div><div><b>Flotas y activos</b><a href="flotas-activos.html">Resumen</a><a href="flotas-activos.html#como-funciona">Cómo funciona</a><a href="flotas-activos.html#preguntas">Preguntas frecuentes</a></div></div></div>
-</header>
-<main><div class="phero"><div class="wrap"><nav class="crumb" aria-label="Ruta"><a href="index.html">Inicio</a> / Desarrollo de software con IA</nav><p class="kick">Desarrollo con IA</p><h1>Escriba, revise y pruebe código más rápido</h1><p>Un asistente de inteligencia artificial que acompaña a su equipo en todo el ciclo de desarrollo: código, revisión, pruebas y documentación.</p><a class="btn" href="contacto.html">Solicitar demostración <span>→</span></a></div></div><section id="funciones" class="layer"><div class="wrap"><h2>Qué incluye</h2><div class="pts c3"><div><h3>Asistente de código</h3><p>Sugiere y completa código dentro del editor que su equipo ya usa.</p></div><div><h3>Revisión automática</h3><p>Analiza los cambios y señala errores y mejoras antes de la revisión humana.</p></div><div><h3>Generación de pruebas</h3><p>Propone pruebas para el código nuevo y el existente.</p></div><div><h3>Documentación al día</h3><p>Redacta y actualiza la documentación a partir del código.</p></div><div><h3>Integración con repositorios</h3><p>Se conecta con los flujos de trabajo de su equipo.</p></div><div><h3>Control de privacidad</h3><p>Usted define qué código puede analizarse y cómo se trata.</p></div></div></div></section><section id="como-funciona"><div class="wrap"><h2>Cómo funciona</h2><div class="pts steps"><div><h3>Paso 1</h3><p>Conecte su repositorio y su editor.</p></div><div><h3>Paso 2</h3><p>Elija qué tareas apoyará el asistente.</p></div><div><h3>Paso 3</h3><p>El asistente propone cambios y pruebas.</p></div><div><h3>Paso 4</h3><p>Su equipo revisa y aprueba todo.</p></div></div></div></section><section class="layer"><div class="wrap two"><div><h2>Para quién es</h2></div><ul class="tick"><li>Equipos de ingeniería</li><li>Software empresarial</li><li>Startups y agencias</li><li>Áreas de TI de cualquier industria</li></ul></div></section><section id="preguntas"><div class="wrap two"><div><h2>Preguntas frecuentes</h2></div><div><details><summary>¿Mi código se comparte con terceros?</summary><p>Se trata según lo acordado en el contrato y en nuestra Política de Privacidad. Conversamos opciones en la demostración.</p></details><details><summary>¿Reemplaza a mis desarrolladores?</summary><p>No. Acelera tareas repetitivas, pero las decisiones y la aprobación final son de su equipo.</p></details><details><summary>¿Qué lenguajes soporta?</summary><p>Los más usados. Confirmamos la compatibilidad con su tecnología en la demostración.</p></details></div></div></section><div class="cta"><div class="wrap"><h2>Solicite una demostración de 30 minutos</h2><a class="btn" href="contacto.html">Agendar demostración <span>→</span></a></div></div></main>
-<footer><div class="wrap">
-<div class="loc"><span>Meridian</span><a href="#" style="padding:0">Perú / Español</a></div>
-<div class="cols">
-<div><b>Soluciones</b><a href="deteccion-armamentos.html">Detección de armamentos por IA</a><a href="desarrollo-ia.html">Desarrollo de software con IA</a><a href="telemetria.html">Telemetría</a><a href="flotas-activos.html">Flotas y activos</a></div>
-<div><b>Empresa</b><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div>
-<div><b>Soporte</b><a href="soporte.html">Centro de ayuda</a><a href="contacto.html">Escríbanos</a></div>
-<div><b>Legal</b><a href="privacidad.html">Política de Privacidad</a><a href="terminos.html">Términos y Condiciones</a><a href="libro-de-reclamaciones.html">Libro de Reclamaciones</a></div>
-<div><b>Contacto</b><a href="mailto:contacto@meridian.example">contacto@meridian.example</a><a href="#">+51 000 000 000</a><a href="#">Lima, Perú</a></div>
-</div>
-<div class="legal"><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a class="libro" href="libro-de-reclamaciones.html">Libro de Reclamaciones</a><span>Meridian Systems es una empresa ficticia; página de demostración.</span></div>
-</div></footer>
-<script src="script.js"></script>
+
+<body class="ia-page">
+  <header class="mast">
+    <div class="wrap">
+      <div class="bar">
+        <button class="burger" aria-label="Abrir menú" id="bg">
+          Menú
+        </button>
+
+        <a class="logo" href="index.html">Meridian</a>
+
+        <nav class="menu" id="menu" aria-label="Principal">
+          <button aria-expanded="false" aria-controls="m1">
+            Soluciones ▾
+          </button>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="soporte.html">Soporte</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <div class="tools">
+          <a class="hide" href="libro-de-reclamaciones.html">
+            Libro de Reclamaciones
+          </a>
+          <a href="#">Iniciar sesión</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mega" id="m1">
+      <div class="wrap">
+        <div>
+          <b>Seguridad con IA</b>
+          <a href="deteccion-armamentos.html">Resumen</a>
+          <a href="deteccion-armamentos.html#como-funciona">
+            Cómo funciona
+          </a>
+          <a href="deteccion-armamentos.html#preguntas">
+            Preguntas frecuentes
+          </a>
+        </div>
+
+        <div>
+          <b>Desarrollo con IA</b>
+          <a href="desarrollo-ia.html#resumen">Resumen</a>
+          <a href="desarrollo-ia.html#como-funciona">
+            Cómo funciona
+          </a>
+          <a href="desarrollo-ia.html#preguntas">
+            Preguntas frecuentes
+          </a>
+        </div>
+
+        <div>
+          <b>Telemetría</b>
+          <a href="telemetria.html">Resumen</a>
+          <a href="telemetria.html#como-funciona">Cómo funciona</a>
+          <a href="telemetria.html#preguntas">Preguntas frecuentes</a>
+        </div>
+
+        <div>
+          <b>Flotas y activos</b>
+          <a href="flotas-activos.html">Resumen</a>
+          <a href="flotas-activos.html#como-funciona">
+            Cómo funciona
+          </a>
+          <a href="flotas-activos.html#preguntas">
+            Preguntas frecuentes
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Resumen -->
+    <div class="phero" id="resumen">
+      <div class="wrap">
+        <nav class="crumb" aria-label="Ruta">
+          <a href="index.html">Inicio</a> /
+          Desarrollo de sistemas e IA
+        </nav>
+
+        <p class="kick">Desarrollo con IA</p>
+
+        <h1>Sistemas e inteligencia artificial para su empresa</h1>
+
+        <p>
+          Desarrollamos sistemas empresariales y aplicaciones de
+          inteligencia artificial según las necesidades de su negocio.
+          Apoyamos su implementación y despliegue en infraestructura
+          dedicada.
+        </p>
+
+        <a class="btn" href="contacto.html">
+          Cuéntenos su proyecto <span aria-hidden="true">→</span>
+        </a>
+
+        <nav class="ia-nav" aria-label="Secciones de Desarrollo con IA">
+          <a href="#funciones">Qué podemos desarrollar</a>
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#preguntas">Preguntas frecuentes</a>
+        </nav>
+      </div>
+    </div>
+
+    <section id="funciones" class="layer">
+      <div class="wrap">
+        <h2>Qué podemos desarrollar</h2>
+
+        <p class="lead">
+          Elegimos la tecnología según el proceso que necesita mejorar
+          y la información disponible.
+        </p>
+
+        <div class="pts c3">
+          <div>
+            <h3>Sistemas empresariales</h3>
+            <p>
+              Aplicaciones para organizar información y gestionar
+              procesos internos, utilizando frameworks de uso
+              extendido en la industria.
+            </p>
+          </div>
+
+          <div>
+            <h3>Asistentes con IA</h3>
+            <p>
+              Soluciones con modelos de lenguaje (LLM) y RAG para
+              consultar documentos y responder preguntas a partir
+              de información del negocio.
+            </p>
+          </div>
+
+          <div>
+            <h3>Lectura de documentos</h3>
+            <p>
+              Aplicaciones con reconocimiento óptico de caracteres
+              (OCR) para extraer texto de imágenes y documentos
+              digitalizados.
+            </p>
+          </div>
+
+          <div>
+            <h3>Visión por computadora</h3>
+            <p>
+              Análisis de imágenes y video para identificar objetos
+              o eventos definidos según el uso de la aplicación.
+            </p>
+          </div>
+
+          <div>
+            <h3>Análisis de datos</h3>
+            <p>
+              Modelos de aprendizaje automático y redes neuronales
+              para reconocer patrones, clasificar información
+              y apoyar el análisis de datos.
+            </p>
+          </div>
+
+          <div>
+            <h3>Procesamiento de lenguaje</h3>
+            <p>
+              Aplicaciones para analizar textos, clasificar mensajes
+              y organizar información escrita mediante técnicas
+              de procesamiento de lenguaje natural.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section id="como-funciona">
+      <div class="wrap">
+        <h2>Cómo funciona</h2>
+
+        <p class="lead">
+          Partimos de una necesidad concreta y definimos el alcance
+          antes de desarrollar la solución.
+        </p>
+
+        <div class="pts steps">
+          <div>
+            <h3>Conocer su necesidad</h3>
+            <p>
+              Revisamos el proceso que desea mejorar, quién utilizará
+              el sistema y qué información está disponible.
+            </p>
+          </div>
+
+          <div>
+            <h3>Definir la solución</h3>
+            <p>
+              Proponemos las funciones, la tecnología y los requisitos
+              de infraestructura según el alcance acordado.
+            </p>
+          </div>
+
+          <div>
+            <h3>Desarrollar y probar</h3>
+            <p>
+              Construimos la aplicación y comprobamos su funcionamiento
+              con casos de prueba relacionados con el proceso.
+            </p>
+          </div>
+
+          <div>
+            <h3>Preparar el despliegue</h3>
+            <p>
+              Apoyamos la instalación y configuración en la
+              infraestructura dedicada definida para el proyecto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="layer">
+      <div class="wrap two">
+        <div>
+          <h2>Para quién es</h2>
+          <p class="lead2">
+            Para empresas y equipos que buscan desarrollar un sistema
+            o incorporar inteligencia artificial en sus procesos.
+          </p>
+        </div>
+
+        <ul class="tick">
+          <li>Negocios que necesitan sistemas a medida</li>
+          <li>Equipos que consultan documentos internos</li>
+          <li>Áreas que procesan imágenes o textos</li>
+          <li>Empresas que necesitan analizar sus datos</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Preguntas frecuentes -->
+    <section id="preguntas">
+      <div class="wrap two">
+        <div>
+          <h2>Preguntas frecuentes</h2>
+          <p class="lead2">
+            Algunas dudas antes de iniciar un proyecto.
+          </p>
+        </div>
+
+        <div>
+          <details>
+            <summary>¿Qué necesito para empezar?</summary>
+            <p>
+              Una descripción del problema que desea resolver y del
+              proceso actual. Si cuenta con documentos, datos o un
+              sistema existente, esa información ayudará a evaluar
+              la propuesta.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Todos los sistemas necesitan IA?</summary>
+            <p>
+              No. La tecnología se elige según la necesidad.
+              Algunos procesos se resuelven con un sistema empresarial;
+              otros pueden beneficiarse de funciones de inteligencia
+              artificial.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Se puede integrar con un sistema existente?</summary>
+            <p>
+              La posibilidad de integración depende de la tecnología,
+              los accesos y las interfaces disponibles. Estos puntos
+              se revisan antes de definir el alcance.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Qué pasa si todavía no tengo datos?</summary>
+            <p>
+              Primero se identifica qué información necesita la
+              solución. Para un prototipo pueden evaluarse datos de
+              ejemplo; las pruebas con información real se planifican
+              según el objetivo del proyecto.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Dónde se instalará la aplicación?</summary>
+            <p>
+              La infraestructura se define según los requisitos del
+              sistema. El servicio contempla apoyo para el despliegue
+              de aplicaciones de IA en infraestructura dedicada.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Cuánto cuesta y cuánto tiempo demora?</summary>
+            <p>
+              Depende de las funciones, las integraciones y la
+              complejidad del proyecto. El presupuesto y el plazo
+              se establecen después de revisar los requerimientos.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Cómo se manejará la información de mi empresa?</summary>
+            <p>
+              Antes de utilizar información del negocio, se deben
+              acordar los permisos de acceso, el almacenamiento
+              y las condiciones de uso de los datos.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Qué soporte incluye el proyecto?</summary>
+            <p>
+              El texto del servicio contempla apoyo para el despliegue.
+              El mantenimiento, las actualizaciones y el soporte
+              posterior se definen en la propuesta de cada proyecto.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta">
+      <div class="wrap">
+        <h2>Conversemos sobre su próximo sistema</h2>
+
+        <a class="btn" href="contacto.html">
+          Contactar al equipo <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="loc">
+        <span>Meridian</span>
+        <a href="#" style="padding:0">Perú / Español</a>
+      </div>
+
+      <div class="cols">
+        <div>
+          <b>Soluciones</b>
+          <a href="deteccion-armamentos.html">
+            Detección de armamentos por IA
+          </a>
+          <a href="desarrollo-ia.html">Desarrollo de sistemas e IA</a>
+          <a href="telemetria.html">Telemetría</a>
+          <a href="flotas-activos.html">Flotas y activos</a>
+        </div>
+
+        <div>
+          <b>Empresa</b>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+
+        <div>
+          <b>Soporte</b>
+          <a href="soporte.html">Centro de ayuda</a>
+          <a href="contacto.html">Escríbanos</a>
+        </div>
+
+        <div>
+          <b>Legal</b>
+          <a href="privacidad.html">Política de Privacidad</a>
+          <a href="terminos.html">Términos y Condiciones</a>
+          <a href="libro-de-reclamaciones.html">
+            Libro de Reclamaciones
+          </a>
+        </div>
+
+        <div>
+          <b>Contacto</b>
+          <a href="mailto:contacto@meridian.example">
+            contacto@meridian.example
+          </a>
+          <a href="#">+51 000 000 000</a>
+          <a href="#">Lima, Perú</a>
+        </div>
+      </div>
+
+      <div class="legal">
+        <a href="privacidad.html">Privacidad</a>
+        <a href="terminos.html">Términos</a>
+        <a class="libro" href="libro-de-reclamaciones.html">
+          Libro de Reclamaciones
+        </a>
+        <span>
+          Meridian Systems es una empresa ficticia;
+          página de demostración.
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
