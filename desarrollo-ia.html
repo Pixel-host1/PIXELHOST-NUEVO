@@ -54,6 +54,68 @@
     .ia-page .cta .btn:hover {
       background: #e8e8e8;
     }
+
+    /* Portada de Desarrollo e IA con imagen */
+    .ia-page .ia-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 48px;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    .ia-page .ia-hero-content {
+      min-width: 0;
+    }
+
+    .ia-page .ia-hero-content .kick {
+      margin-top: 24px;
+    }
+
+    .ia-page .ia-hero-content h1 {
+      max-width: 100%;
+    }
+
+    .ia-page .ia-hero-content p:not(.kick) {
+      max-width: 100%;
+    }
+
+    .ia-page .ia-hero-media {
+      min-width: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ia-page .ia-hero-media img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1536 / 1024;
+      object-fit: contain;
+      border: 1px solid #393939;
+    }
+
+    @media (max-width: 960px) {
+      .ia-page .ia-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    /* Iconos SVG de las seis tarjetas de servicios */
+    .ia-page #funciones .pts > div::before {
+      display: none;
+    }
+
+    .ia-page .ia-card-icon {
+      display: block;
+      width: 32px;
+      height: 32px;
+      color: var(--blue);
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
   </style>
 </head>
 
@@ -138,26 +200,34 @@
           Desarrollo de sistemas e IA
         </nav>
 
-        <p class="kick">Desarrollo con IA</p>
+        <div class="ia-hero-grid">
+          <div class="ia-hero-content">
+            <p class="kick">Desarrollo con IA</p>
 
-        <h1>Sistemas e inteligencia artificial para su empresa</h1>
+            <h1>Sistemas e inteligencia artificial para su empresa</h1>
 
-        <p>
-          Desarrollamos sistemas empresariales y aplicaciones de
-          inteligencia artificial según las necesidades de su negocio.
-          Apoyamos su implementación y despliegue en infraestructura
-          dedicada.
-        </p>
+            <p>
+              Desarrollamos sistemas empresariales y aplicaciones de
+              inteligencia artificial según las necesidades de su negocio.
+              Apoyamos su implementación y despliegue en infraestructura
+              dedicada.
+            </p>
 
-        <a class="btn" href="contacto.html">
-          Cuéntenos su proyecto <span aria-hidden="true">→</span>
-        </a>
+            <a class="btn" href="contacto.html">
+              Cuéntenos su proyecto <span aria-hidden="true">→</span>
+            </a>
 
-        <nav class="ia-nav" aria-label="Secciones de Desarrollo con IA">
-          <a href="#funciones">Qué podemos desarrollar</a>
-          <a href="#como-funciona">Cómo funciona</a>
-          <a href="#preguntas">Preguntas frecuentes</a>
-        </nav>
+            <nav class="ia-nav" aria-label="Secciones de Desarrollo con IA">
+              <a href="#funciones">Qué podemos desarrollar</a>
+              <a href="#como-funciona">Cómo funciona</a>
+              <a href="#preguntas">Preguntas frecuentes</a>
+            </nav>
+          </div>
+
+          <div class="ia-hero-media">
+            <img src="Media/desarrollo-ia.png" alt="Desarrollo de sistemas e inteligencia artificial para empresas" width="1536" height="1024">
+          </div>
+        </div>
       </div>
     </div>
 
@@ -172,6 +242,14 @@
 
         <div class="pts c3">
           <div>
+            <svg class="ia-card-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="7" y1="6.5" x2="7.01" y2="6.5"></line>
+              <line x1="10" y1="6.5" x2="10.01" y2="6.5"></line>
+              <line x1="7" y1="13" x2="13" y2="13"></line>
+              <line x1="7" y1="16" x2="10" y2="16"></line>
+            </svg>
             <h3>Sistemas empresariales</h3>
             <p>
               Aplicaciones para organizar información y gestionar
@@ -181,6 +259,10 @@
           </div>
 
           <div>
+            <svg class="ia-card-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 9V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2v3l3.5-3H12a2 2 0 0 0 2-2z"></path>
+              <path d="M18 9h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2v3l-3.5-3H11a2 2 0 0 1-2-2v-1"></path>
+            </svg>
             <h3>Asistentes con IA</h3>
             <p>
               Soluciones con modelos de lenguaje (LLM) y RAG para
@@ -190,6 +272,14 @@
           </div>
 
           <div>
+            <svg class="ia-card-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"></path>
+              <polyline points="14 3 14 8 19 8"></polyline>
+              <line x1="2" y1="13" x2="22" y2="13"></line>
+              <polyline points="4 11 2 13 4 15"></polyline>
+              <polyline points="20 11 22 13 20 15"></polyline>
+              <line x1="10" y1="17" x2="15" y2="17"></line>
+            </svg>
             <h3>Lectura de documentos</h3>
             <p>
               Aplicaciones con reconocimiento óptico de caracteres
@@ -199,6 +289,13 @@
           </div>
 
           <div>
+            <svg class="ia-card-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 8V5a2 2 0 0 1 2-2h3"></path>
+              <path d="M16 3h3a2 2 0 0 1 2 2v3"></path>
+              <path d="M3 16v3a2 2 0 0 0 2 2h3"></path>
+              <path d="M16 21h3a2 2 0 0 0 2-2v-3"></path>
+              <circle cx="12" cy="12" r="3.5"></circle>
+            </svg>
             <h3>Visión por computadora</h3>
             <p>
               Análisis de imágenes y video para identificar objetos
@@ -207,6 +304,12 @@
           </div>
 
           <div>
+            <svg class="ia-card-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="20" x2="21" y2="20"></line>
+              <rect x="5" y="13" width="3" height="7" rx="0.5"></rect>
+              <rect x="10.5" y="8" width="3" height="12" rx="0.5"></rect>
+              <rect x="16" y="4" width="3" height="16" rx="0.5"></rect>
+            </svg>
             <h3>Análisis de datos</h3>
             <p>
               Modelos de aprendizaje automático y redes neuronales
@@ -216,6 +319,12 @@
           </div>
 
           <div>
+            <svg class="ia-card-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="4" y1="6" x2="20" y2="6"></line>
+              <line x1="4" y1="10" x2="15" y2="10"></line>
+              <line x1="4" y1="14" x2="20" y2="14"></line>
+              <line x1="4" y1="18" x2="12" y2="18"></line>
+            </svg>
             <h3>Procesamiento de lenguaje</h3>
             <p>
               Aplicaciones para analizar textos, clasificar mensajes
