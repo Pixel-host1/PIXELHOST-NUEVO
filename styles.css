@@ -195,3 +195,124 @@ img{max-width:100%}
 .pic{min-width:0}
 .pic img{height:auto;aspect-ratio:25/16;object-fit:cover}
 .hero .wrap>*,.sp>*,.two>*{min-width:0}
+
+/* ---- Páginas de servicios (detección de armamentos, telemetría, flotas y activos) ---- */
+.service-page #resumen,
+.service-page #como-funciona,
+.service-page #preguntas {
+  scroll-margin-top: 72px;
+}
+
+.service-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 32px;
+  font-size: 14px;
+}
+
+.service-nav a {
+  color: #c6c6c6;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #525252;
+}
+
+.service-nav a:hover {
+  color: #fff;
+  border-color: #78a9ff;
+}
+
+.service-page .btn {
+  background: #0f62fe;
+  color: #fff;
+}
+
+.service-page .btn:hover {
+  background: #0050e6;
+}
+
+.service-page .cta .btn {
+  background: #fff;
+  color: #0043ce;
+}
+
+.service-page .cta .btn:hover {
+  background: #e8e8e8;
+}
+
+/* Portada de servicios con estructura preparada para imagen */
+.service-page .service-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.service-page .service-hero-grid:has(.service-hero-media img) {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+}
+
+.service-page .service-hero-content {
+  min-width: 0;
+}
+
+.service-page .service-hero-content .kick {
+  margin-top: 24px;
+}
+
+.service-page .service-hero-content h1 {
+  max-width: 100%;
+}
+
+.service-page .service-hero-content p:not(.kick) {
+  max-width: 680px;
+}
+
+.service-page .service-hero-grid:has(.service-hero-media img) .service-hero-content p:not(.kick) {
+  max-width: 100%;
+}
+
+.service-page .service-hero-media {
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-page .service-hero-media:empty,
+.service-page .service-hero-media:not(:has(img)) {
+  display: none;
+}
+
+.service-page .service-hero-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1536 / 1024;
+  object-fit: contain;
+  border: 1px solid #393939;
+}
+
+@media (max-width: 960px) {
+  .service-page .service-hero-grid,
+  .service-page .service-hero-grid:has(.service-hero-media img) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Retira la barra decorativa superior solo de las tarjetas con icono */
+.service-page #funciones .pts > div::before {
+  display: none;
+}
+
+/* Iconos SVG de las tarjetas de servicios */
+.service-card-icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+  color: var(--blue);
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
