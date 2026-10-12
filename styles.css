@@ -203,7 +203,7 @@ img{max-width:100%}
   scroll-margin-top: 72px;
 }
 
-.service-nav {
+.service-page .service-nav {
   display: flex;
   flex-wrap: wrap;
   gap: 12px 24px;
@@ -211,13 +211,13 @@ img{max-width:100%}
   font-size: 14px;
 }
 
-.service-nav a {
+.service-page .service-nav a {
   color: #c6c6c6;
   padding-bottom: 6px;
   border-bottom: 1px solid #525252;
 }
 
-.service-nav a:hover {
+.service-page .service-nav a:hover {
   color: #fff;
   border-color: #78a9ff;
 }
@@ -249,6 +249,10 @@ img{max-width:100%}
   margin-top: 8px;
 }
 
+.service-page .service-hero-grid.has-media {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+}
+
 .service-page .service-hero-grid:has(.service-hero-media img) {
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
 }
@@ -267,6 +271,10 @@ img{max-width:100%}
 
 .service-page .service-hero-content p:not(.kick) {
   max-width: 680px;
+}
+
+.service-page .service-hero-grid.has-media .service-hero-content p:not(.kick) {
+  max-width: 100%;
 }
 
 .service-page .service-hero-grid:has(.service-hero-media img) .service-hero-content p:not(.kick) {
@@ -296,6 +304,11 @@ img{max-width:100%}
 
 @media (max-width: 960px) {
   .service-page .service-hero-grid,
+  .service-page .service-hero-grid.has-media {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
   .service-page .service-hero-grid:has(.service-hero-media img) {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -308,7 +321,7 @@ img{max-width:100%}
 }
 
 /* Iconos SVG de las tarjetas de servicios */
-.service-card-icon {
+.service-page .service-card-icon {
   display: block;
   width: 32px;
   height: 32px;
