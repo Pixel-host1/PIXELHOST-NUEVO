@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>IA para seguridad, software y telemetría · KreaLab TECH</title>
+<title>IA para seguridad, software y telemetría · Pixel Host</title>
 <meta name="description" content="IA para seguridad, software y telemetría.">
+<link rel="icon" type="image/png" href="Media/PixelHost-Logo.png">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -12,19 +13,19 @@
 <body>
 <header class="mast">
 <div class="wrap"><div class="bar">
-<button class="burger" aria-label="Abrir menú" id="bg">Menú</button>
-<a class="logo" href="index.html">KreaLab TECH</a>
+<button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu" id="bg"><svg class="icon-menu" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><rect x="2" y="4" width="16" height="2"></rect><rect x="2" y="9" width="16" height="2"></rect><rect x="2" y="14" width="16" height="2"></rect></svg><svg class="icon-close" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="4" x2="16" y2="16"></line><line x1="16" y1="4" x2="4" y2="16"></line></svg></button>
+<a class="logo" href="index.html"><img src="Media/PixelHost-Logo.png" alt="" width="32" height="32"><span>Pixel Host</span></a>
 <nav class="menu" id="menu" aria-label="Principal">
-<button aria-expanded="false" aria-controls="m1">Soluciones ▾</button>
+<button aria-expanded="false" aria-controls="m1">Soluciones <span class="chevron" aria-hidden="true">▾</span></button>
+<div class="mega" id="m1"><div class="wrap"><div><b>Seguridad con IA</b><a href="deteccion-armamentos.html">Resumen</a><a href="deteccion-armamentos.html#como-funciona">Cómo funciona</a><a href="deteccion-armamentos.html#preguntas">Preguntas frecuentes</a></div><div><b>Desarrollo con IA</b><a href="desarrollo-ia.html">Resumen</a><a href="desarrollo-ia.html#como-funciona">Cómo funciona</a><a href="desarrollo-ia.html#preguntas">Preguntas frecuentes</a></div><div><b>Telemetría</b><a href="telemetria.html">Resumen</a><a href="telemetria.html#como-funciona">Cómo funciona</a><a href="telemetria.html#preguntas">Preguntas frecuentes</a></div><div><b>Flotas y activos</b><a href="flotas-activos.html">Resumen</a><a href="flotas-activos.html#como-funciona">Cómo funciona</a><a href="flotas-activos.html#preguntas">Preguntas frecuentes</a></div></div></div>
 <a href="nosotros.html">Nosotros</a><a href="soporte.html">Soporte</a><a href="contacto.html">Contacto</a>
 </nav>
 <div class="tools"><a class="hide" href="libro-de-reclamaciones.html">Libro de Reclamaciones</a></div>
 </div></div>
-<div class="mega" id="m1"><div class="wrap"><div><b>Seguridad con IA</b><a href="deteccion-armamentos.html">Resumen</a><a href="deteccion-armamentos.html#como-funciona">Cómo funciona</a><a href="deteccion-armamentos.html#preguntas">Preguntas frecuentes</a></div><div><b>Desarrollo con IA</b><a href="desarrollo-ia.html">Resumen</a><a href="desarrollo-ia.html#como-funciona">Cómo funciona</a><a href="desarrollo-ia.html#preguntas">Preguntas frecuentes</a></div><div><b>Telemetría</b><a href="telemetria.html">Resumen</a><a href="telemetria.html#como-funciona">Cómo funciona</a><a href="telemetria.html#preguntas">Preguntas frecuentes</a></div><div><b>Flotas y activos</b><a href="flotas-activos.html">Resumen</a><a href="flotas-activos.html#como-funciona">Cómo funciona</a><a href="flotas-activos.html#preguntas">Preguntas frecuentes</a></div></div></div>
 </header>
 <main class="home">
 <div class="hero"><div class="wrap">
-<div><p class="eyebrow">KreaLab TECH · Inteligencia artificial</p><h1>La IA que cuida su negocio, acelera su software y controla sus activos</h1><p>Detección de riesgos, desarrollo asistido, telemetría y gestión de flotas, en un solo lugar y a un costo accesible.</p><a class="btn" href="contacto.html">Solicitar demostración <span>→</span></a><a class="btn alt" href="#soluciones">Ver servicios</a></div>
+<div><p class="eyebrow">Pixel Host · Inteligencia artificial</p><h1>La IA que cuida su negocio, acelera su software y controla sus activos</h1><p>Detección de riesgos, desarrollo asistido, telemetría y gestión de flotas, en un solo lugar y a un costo accesible.</p><a class="btn" href="contacto.html">Solicitar demostración <span>→</span></a><a class="btn alt" href="#soluciones">Ver servicios</a></div>
 <div class="pic"><img src="Media/hero.png" onerror="this.onerror=null;this.src='img/hero.svg'" alt="Panel de vigilancia con una alerta automática, alarma local y mensaje con foto" width="1600" height="1040"></div>
 </div></div>
 
@@ -74,9 +75,9 @@
 <div><span class="n">02</span><p class="big">Protege</p><p>Bloquee puertas y apague el motor a distancia cuando haga falta.</p></div>
 <div><span class="n">03</span><p class="big">Controla zonas</p><p>Reciba avisos de entrada y salida de áreas seguras.</p></div></div>
 <p class="fine">El bloqueo y el apagado remoto deben usarse según protocolos de seguridad y la normativa aplicable.</p></div></div>
-<a class="next" href="contacto.html"><div class="wrap"><span>¿Listo para empezar?</span><b>Hable con KreaLab TECH →</b></div></a>
+<a class="next" href="contacto.html"><div class="wrap"><span>¿Listo para empezar?</span><b>Hable con Pixel Host →</b></div></a>
 
-<section><div class="wrap"><h2>¿Quién usa KreaLab TECH?</h2><div class="pts">
+<section><div class="wrap"><h2>¿Quién usa Pixel Host?</h2><div class="pts">
 <div><h3>Bodegas y minimarkets</h3><p>Alertas y alarma local para proteger el local y avisar al vecindario.</p></div>
 <div><h3>Pequeños negocios</h3><p>Seguridad con IA a un costo accesible y sin equipos complejos.</p></div>
 <div><h3>Choferes y transportistas</h3><p>Seguimiento, alertas y control antirrobo de la unidad.</p></div>
@@ -92,15 +93,15 @@
 </main>
 
 <footer><div class="wrap">
-<div class="loc"><span>KreaLab TECH</span><a href="#" style="padding:0">Perú / Español</a></div>
+<div class="loc"><a class="flogo" href="index.html"><img src="Media/PixelHost-Logo-2.png" alt="Pixel Host · Servicios tecnológicos" width="120" height="44"></a><a href="#" style="padding:0">Perú / Español</a></div>
 <div class="cols">
 <div><b>Soluciones</b><a href="deteccion-armamentos.html">Detección de armamentos por IA</a><a href="desarrollo-ia.html">Desarrollo de software con IA</a><a href="telemetria.html">Telemetría</a><a href="flotas-activos.html">Flotas y activos</a></div>
 <div><b>Empresa</b><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div>
 <div><b>Soporte</b><a href="soporte.html">Centro de ayuda</a><a href="contacto.html">Escríbanos</a></div>
 <div><b>Legal</b><a href="privacidad.html">Política de Privacidad</a><a href="terminos.html">Términos y Condiciones</a><a href="libro-de-reclamaciones.html">Libro de Reclamaciones</a></div>
-<div><b>Contacto</b><a href="mailto:contacto@krealab.example">contacto@krealab.example</a><a href="#">+51 000 000 000</a><a href="#">Lima, Perú</a></div>
+<div><b>Contacto</b><a href="mailto:contacto@pixelhost.example">contacto@pixelhost.example</a><a href="#">+51 000 000 000</a><a href="#">Lima, Perú</a></div>
 </div>
-<div class="legal"><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a class="libro" href="libro-de-reclamaciones.html">Libro de Reclamaciones</a><span>© 2026 KreaLab TECH. Todos los derechos reservados.</span></div>
+<div class="legal"><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a class="libro" href="libro-de-reclamaciones.html">Libro de Reclamaciones</a><span>© 2026 Pixel Host. Todos los derechos reservados.</span></div>
 </div></footer>
 <script src="script.js"></script>
 </body>
