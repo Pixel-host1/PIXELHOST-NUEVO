@@ -198,9 +198,6 @@ img{max-width:100%}
 
 /* ---- logotipo ---- */
 .logo{display:flex;align-items:center;gap:10px}
-.logo img{display:block;width:32px;height:32px;background:#fff;padding:2px}
-footer .flogo{display:inline-block;background:#fff;padding:10px 16px}
-footer .flogo img{display:block;height:44px;width:auto}
 
 /* ---- página Detección de armamentos: más contenido ---- */
 .phero.psplit .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
@@ -245,3 +242,18 @@ ol.tl span{color:var(--ink2);font-size:14px}
 @media(max-width:560px){.ft,.ft.c4,.flow{grid-template-columns:1fr}}
 p.t{color:var(--ink2);font-size:18px;line-height:1.55;margin:0}
 @media(max-width:560px){.btn.alt{margin:8px 0 0;width:100%;justify-content:center}}
+
+/* ---- páginas de servicios con imagen de portada e íconos ---- */
+#resumen,#funciones,#como-funciona,#preguntas{scroll-margin-top:72px}
+.service-hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center;margin-top:8px}
+.service-hero-content{min-width:0}
+.service-hero-content .kick{margin-top:24px}
+.service-hero-content h1,.service-hero-content p:not(.kick){max-width:100%}
+.service-hero-media{min-width:0;display:flex;justify-content:center;align-items:center}
+.service-hero-media img{display:block;width:100%;height:auto;aspect-ratio:1536/1024;object-fit:contain;border:1px solid #393939}
+.service-nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:32px;font-size:14px}
+.service-nav a{color:#c6c6c6;padding-bottom:6px;border-bottom:1px solid #525252}
+.service-nav a:hover{color:#fff;border-color:#78a9ff}
+.service-page #funciones .pts>div::before{display:none}
+.service-card-icon{display:block;width:32px;height:32px;color:var(--blue);margin-bottom:20px;flex-shrink:0}
+@media(max-width:960px){.service-hero-grid{grid-template-columns:1fr;gap:32px}}
