@@ -47,6 +47,7 @@
     if (firstFocusable) {
       firstFocusable.focus();
     }
+    closeThemeMenu(false);
   }
 
   function closeMenu(restoreFocus) {
@@ -105,7 +106,9 @@
   // Cerrar con Escape
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
-      if (isMenuOpen()) {
+      if (themeMenu && !themeMenu.hasAttribute('hidden')) {
+        closeThemeMenu(true);
+      } else if (isMenuOpen()) {
         closeMenu(true);
       } else {
         closeMegas();
@@ -138,6 +141,77 @@
       closeMenu(false);
     }
   });
+
+  // ---- Selector de tema (botón único alternable Sol / Luna) ----
+  var STORAGE_KEY = 'pixelhost-theme';
+  var themeBtn = document.getElementById('theme-btn');
+
+  function getManualTheme() {
+    try {
+      var val = localStorage.getItem(STORAGE_KEY);
+      if (val === 'light' || val === 'dark') return val;
+    } catch (e) {}
+    return null;
+  }
+
+  function getSystemTheme() {
+    return (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+  }
+
+  function applyTheme(targetTheme, saveManual) {
+    var theme = (targetTheme === 'dark') ? 'dark' : 'light';
+
+    if (saveManual) {
+      try {
+        localStorage.setItem(STORAGE_KEY, theme);
+      } catch (e) {}
+    }
+
+    document.documentElement.setAttribute('data-theme', theme);
+
+    if (themeBtn) {
+      if (theme === 'dark') {
+        themeBtn.setAttribute('aria-label', 'Activar modo claro');
+        themeBtn.setAttribute('title', 'Activar modo claro');
+      } else {
+        themeBtn.setAttribute('aria-label', 'Activar modo oscuro');
+        themeBtn.setAttribute('title', 'Activar modo oscuro');
+      }
+    }
+  }
+
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function() {
+      var current = document.documentElement.getAttribute('data-theme') || (getManualTheme() || getSystemTheme());
+      var nextTheme = (current === 'dark') ? 'light' : 'dark';
+      applyTheme(nextTheme, true);
+    });
+  }
+
+  // Inicializar estado del selector
+  var initialManual = getManualTheme();
+  if (initialManual) {
+    applyTheme(initialManual, false);
+  } else {
+    applyTheme(getSystemTheme(), false);
+  }
+
+  // Si no hay elección manual, responder a cambios de preferencia del sistema
+  var mql = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  function handleSystemThemeChange(e) {
+    if (!getManualTheme()) {
+      var newTheme = (e && typeof e.matches === 'boolean' ? e.matches : mql.matches) ? 'dark' : 'light';
+      applyTheme(newTheme, false);
+    }
+  }
+
+  if (mql) {
+    if (mql.addEventListener) {
+      mql.addEventListener('change', handleSystemThemeChange);
+    } else if (mql.addListener) {
+      mql.addListener(handleSystemThemeChange);
+    }
+  }
 
 var tabs=document.querySelectorAll('.tabs button'),panels=document.querySelectorAll('.panel');
 tabs.forEach(function(t){t.addEventListener('click',function(){

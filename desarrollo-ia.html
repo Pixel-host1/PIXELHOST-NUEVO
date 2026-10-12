@@ -7,13 +7,14 @@
 <meta name="description" content="Desarrollo de sistemas empresariales y aplicaciones de inteligencia artificial, con apoyo para su despliegue en infraestructura dedicada.">
 <link rel="icon" type="image/png" href="Media/PixelHost-Logo.png">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<script>(function(){try{var t=localStorage.getItem('pixelhost-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}else{var d=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';document.documentElement.setAttribute('data-theme',d);}}catch(e){}})();</script>
 <link rel="stylesheet" href="styles.css">
 <style>
 /* Ajustes exclusivos de esta página. */
 #resumen,#como-funciona,#preguntas{scroll-margin-top:72px}
 .ia-nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:32px;font-size:14px}
-.ia-nav a{color:#c6c6c6;padding-bottom:6px;border-bottom:1px solid #525252}
-.ia-nav a:hover{color:#fff;border-color:#78a9ff}
+.ia-nav a{color:var(--hero-ink2);padding-bottom:6px;border-bottom:1px solid var(--hero-line);transition:color .15s ease,border-color .15s ease}
+.ia-nav a:hover{color:var(--hero-ink);border-color:var(--blue)}
 .ia-page .btn{background:#0f62fe;color:#fff}
 .ia-page .btn:hover{background:#0050e6}
 .ia-page .cta .btn{background:#fff;color:#0043ce}
@@ -25,7 +26,7 @@
 .ia-page .ia-hero-content h1{max-width:100%}
 .ia-page .ia-hero-content p:not(.kick){max-width:100%}
 .ia-page .ia-hero-media{min-width:0;display:flex;justify-content:center;align-items:center}
-.ia-page .ia-hero-media img{display:block;width:100%;height:auto;aspect-ratio:1536/1024;object-fit:contain;border:1px solid #393939}
+.ia-page .ia-hero-media img{display:block;width:100%;height:auto;aspect-ratio:1536/1024;object-fit:contain;border:1px solid var(--hero-line)}
 @media(max-width:960px){.ia-page .ia-hero-grid{grid-template-columns:1fr;gap:32px}}
 /* Iconos SVG de las seis tarjetas de servicios */
 .ia-page #funciones .pts>div::before{display:none}
@@ -42,8 +43,7 @@
 <div class="mega" id="m1"><div class="wrap"><div><b>Seguridad con IA</b><a href="deteccion-armamentos.html">Resumen</a><a href="deteccion-armamentos.html#como-funciona">Cómo funciona</a><a href="deteccion-armamentos.html#preguntas">Preguntas frecuentes</a></div><div><b>Desarrollo con IA</b><a href="desarrollo-ia.html">Resumen</a><a href="desarrollo-ia.html#como-funciona">Cómo funciona</a><a href="desarrollo-ia.html#preguntas">Preguntas frecuentes</a></div><div><b>Telemetría</b><a href="telemetria.html">Resumen</a><a href="telemetria.html#como-funciona">Cómo funciona</a><a href="telemetria.html#preguntas">Preguntas frecuentes</a></div><div><b>Flotas y activos</b><a href="flotas-activos.html">Resumen</a><a href="flotas-activos.html#como-funciona">Cómo funciona</a><a href="flotas-activos.html#preguntas">Preguntas frecuentes</a></div></div></div>
 <a href="nosotros.html">Nosotros</a><a href="soporte.html">Soporte</a><a href="contacto.html">Contacto</a>
 </nav>
-<div class="tools"><a class="hide" href="libro-de-reclamaciones.html">Libro de Reclamaciones</a></div>
-</div></div>
+<div class="tools"><a class="hide" href="libro-de-reclamaciones.html">Libro de Reclamaciones</a><button type="button" class="theme-btn" id="theme-btn" aria-label="Activar modo oscuro" title="Activar modo oscuro"><svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="3.5"></circle><line x1="10" y1="2" x2="10" y2="4"></line><line x1="10" y1="16" x2="10" y2="18"></line><line x1="2" y1="10" x2="4" y2="10"></line><line x1="16" y1="10" x2="18" y2="10"></line><line x1="4.34" y1="4.34" x2="5.76" y2="5.76"></line><line x1="14.24" y1="14.24" x2="15.66" y2="15.66"></line><line x1="4.34" y1="15.66" x2="5.76" y2="14.24"></line><line x1="14.24" y1="5.76" x2="15.66" y2="4.34"></line></svg><svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg></button></div></div>
 </header>
 <main>
 <!-- Resumen -->
