@@ -2,16 +2,15 @@
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161616;--layer:#262626;--ink:#f4f4f4;--ink2:#c6c6c6;--line:#393939;--blue:#78a9ff;--blue-h:#a6c8ff;--dk:#0b0b0b;--ph:#393939}}
 :root[data-theme="dark"]{--bg:#161616;--layer:#262626;--ink:#f4f4f4;--ink2:#c6c6c6;--line:#393939;--blue:#78a9ff;--blue-h:#a6c8ff;--dk:#0b0b0b;--ph:#393939}
-html{scroll-padding-top:env(safe-area-inset-top,0px);overflow-x:hidden}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 "IBM Plex Sans","Helvetica Neue",Arial,sans-serif;letter-spacing:.16px;overflow-x:hidden}
-body.menu-open{overflow:hidden;touch-action:none}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 "IBM Plex Sans","Helvetica Neue",Arial,sans-serif;letter-spacing:.16px}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
 .wrap{max-width:1584px;margin:0 auto;padding:0 32px}
 /* masthead */
-.mast{background:#161616;color:#f4f4f4;position:sticky;top:env(safe-area-inset-top,0px);z-index:100;border-bottom:1px solid #262626}
+.mast{background:#161616;color:#f4f4f4;position:sticky;top:env(safe-area-inset-top,0px);z-index:10}
 .bar{display:flex;align-items:stretch;height:48px}
 .logo{font-weight:600;display:flex;align-items:center;padding-right:24px}
 .menu{display:flex;flex:1}
@@ -20,7 +19,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
 .tools{display:flex}
 .tools a,.tools button{padding:0 16px;font-size:14px;color:#c6c6c6;display:flex;align-items:center}
 .tools a:hover,.tools button:hover{background:#353535;color:#fff}
-.mega{display:none;position:absolute;left:0;right:0;top:48px;background:#262626;border-top:1px solid #393939;z-index:50}
+.mega{display:none;position:absolute;left:0;right:0;top:48px;background:#262626;border-top:1px solid #393939}
 .mega.open{display:block}
 .mega .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;padding-top:32px;padding-bottom:40px}
 .mega b{display:block;color:#fff;font-weight:400;font-size:14px;border-bottom:1px solid #525252;padding-bottom:8px;margin-bottom:8px}
@@ -87,142 +86,7 @@ footer b{display:block;color:#fff;font-weight:600;margin-bottom:12px}
 footer a{display:block;padding:4px 0}footer a:hover{color:#fff;text-decoration:underline}
 footer .legal{display:flex;gap:24px;flex-wrap:wrap;border-top:1px solid #393939;padding-top:24px;font-size:12px}
 footer .legal a{display:inline;padding:0}
-@media(max-width:960px){
-  .hero .wrap,.panel.on,.split{grid-template-columns:1fr}
-  .hero .wrap{padding-top:48px;padding-bottom:48px;min-height:0}
-  .art{height:220px}
-  .feat,.three{grid-template-columns:1fr}
-  .cards{grid-template-columns:1fr 1fr}
-  footer .cols{grid-template-columns:1fr 1fr}
-  .split .t{padding:48px 24px}
-
-  /* Botón de menú móvil / cerrar */
-  .burger{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:48px;
-    height:48px;
-    padding:0;
-    margin-left:-12px;
-    margin-right:8px;
-    background:transparent;
-    border:0;
-    color:#f4f4f4;
-    cursor:pointer;
-    flex-shrink:0;
-    transition:background .15s ease,color .15s ease
-  }
-  .burger:hover{background:#262626;color:#fff}
-  .burger:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
-  .burger .icon-close{display:none}
-  .burger .icon-menu{display:block}
-  .burger[aria-expanded="true"] .icon-close{display:block}
-  .burger[aria-expanded="true"] .icon-menu{display:none}
-
-  /* Panel del menú móvil debajo del encabezado */
-  .menu{display:none}
-  .menu.show{
-    display:flex;
-    flex-direction:column;
-    position:fixed;
-    top:calc(48px + env(safe-area-inset-top,0px));
-    left:0;
-    right:0;
-    bottom:0;
-    height:calc(100dvh - 48px - env(safe-area-inset-top,0px));
-    max-height:calc(100dvh - 48px - env(safe-area-inset-top,0px));
-    background:#161616;
-    border-top:1px solid #393939;
-    overflow-y:auto;
-    -webkit-overflow-scrolling:touch;
-    z-index:99;
-    padding:0 0 40px;
-    box-shadow:0 16px 32px rgba(0,0,0,.4)
-  }
-
-  /* Elementos de primer nivel del menú */
-  .menu>button,.menu>a{
-    min-height:48px;
-    display:flex;
-    align-items:center;
-    padding:12px 24px;
-    font-size:15px;
-    font-weight:500;
-    color:#f4f4f4;
-    border-bottom:1px solid #262626;
-    background:transparent;
-    text-decoration:none;
-    transition:background .15s ease,color .15s ease
-  }
-  .menu>button{
-    width:100%;
-    justify-content:space-between;
-    cursor:pointer;
-    text-align:left
-  }
-  .menu>button:hover,.menu>a:hover{background:#262626;color:#fff}
-  .menu>button[aria-expanded="true"]{background:#222;color:#fff;border-bottom-color:#393939}
-  .menu>button .chevron{
-    display:inline-block;
-    transition:transform .2s ease;
-    font-size:11px;
-    color:#c6c6c6
-  }
-  .menu>button[aria-expanded="true"] .chevron{
-    transform:rotate(180deg);
-    color:#78a9ff
-  }
-
-  /* Submenú desplegable de Soluciones dentro del panel */
-  .mega{
-    display:none;
-    position:static;
-    background:#1c1c1c;
-    border-top:0;
-    border-bottom:1px solid #393939;
-    padding:0;
-    width:100%;
-    box-shadow:inset 0 2px 4px rgba(0,0,0,.3)
-  }
-  .mega.open{display:block}
-  .mega .wrap{
-    display:block;
-    padding:0;
-    max-width:100%
-  }
-  .mega .wrap>div{
-    padding:6px 0;
-    border-bottom:1px solid #282828
-  }
-  .mega .wrap>div:last-child{border-bottom:0}
-  .mega b{
-    display:block;
-    color:#78a9ff;
-    font-size:12px;
-    font-weight:600;
-    letter-spacing:.6px;
-    text-transform:uppercase;
-    padding:10px 24px 4px 28px;
-    margin:0;
-    border-bottom:0
-  }
-  .mega a{
-    display:flex;
-    align-items:center;
-    min-height:40px;
-    color:#c6c6c6;
-    font-size:14px;
-    padding:6px 24px 6px 36px;
-    text-decoration:none;
-    transition:background .15s ease,color .15s ease
-  }
-  .mega a:hover{
-    color:#fff;
-    background:#262626;
-    text-decoration:none
-  }
-}
+@media(max-width:960px){.hero .wrap,.panel.on,.split{grid-template-columns:1fr}.hero .wrap{padding-top:48px;padding-bottom:48px;min-height:0}.art{height:220px}.feat,.three{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}footer .cols{grid-template-columns:1fr 1fr}.menu{display:none}.menu.show{display:flex;flex-direction:column;position:absolute;top:48px;left:0;right:0;background:#262626}.menu.show>*{height:48px}.burger{display:flex;align-items:center;padding:0 16px;color:#c6c6c6}.mega .wrap{grid-template-columns:1fr 1fr}.split .t{padding:48px 24px}}
 @media(max-width:560px){.wrap{padding:0 16px}.cards{grid-template-columns:1fr}.btn{min-width:100%}.tools .hide{display:none}}
 
 .lead{color:var(--ink2);font-size:20px;line-height:1.4;max-width:720px;margin:-8px 0 40px}
@@ -334,143 +198,6 @@ img{max-width:100%}
 
 /* ---- logotipo ---- */
 .logo{display:flex;align-items:center;gap:10px}
-.logo img{display:block;width:32px;height:32px;background:#fff;padding:2px}
-footer .flogo{display:inline-block;background:#fff;padding:10px 16px}
-footer .flogo img{display:block;height:44px;width:auto}
-
-/* ---- Páginas de servicios (detección de armamentos, telemetría, flotas y activos) ---- */
-.service-page #resumen,
-.service-page #como-funciona,
-.service-page #preguntas {
-  scroll-margin-top: 72px;
-}
-
-.service-page .service-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 24px;
-  margin-top: 32px;
-  font-size: 14px;
-}
-
-.service-page .service-nav a {
-  color: #c6c6c6;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #525252;
-}
-
-.service-page .service-nav a:hover {
-  color: #fff;
-  border-color: #78a9ff;
-}
-
-.service-page .btn {
-  background: #0f62fe;
-  color: #fff;
-}
-
-.service-page .btn:hover {
-  background: #0050e6;
-}
-
-.service-page .cta .btn {
-  background: #fff;
-  color: #0043ce;
-}
-
-.service-page .cta .btn:hover {
-  background: #e8e8e8;
-}
-
-/* Portada de servicios con estructura preparada para imagen */
-.service-page .service-hero-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 48px;
-  align-items: center;
-  margin-top: 8px;
-}
-
-.service-page .service-hero-grid.has-media {
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-}
-
-.service-page .service-hero-grid:has(.service-hero-media img) {
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-}
-
-.service-page .service-hero-content {
-  min-width: 0;
-}
-
-.service-page .service-hero-content .kick {
-  margin-top: 24px;
-}
-
-.service-page .service-hero-content h1 {
-  max-width: 100%;
-}
-
-.service-page .service-hero-content p:not(.kick) {
-  max-width: 680px;
-}
-
-.service-page .service-hero-grid.has-media .service-hero-content p:not(.kick) {
-  max-width: 100%;
-}
-
-.service-page .service-hero-grid:has(.service-hero-media img) .service-hero-content p:not(.kick) {
-  max-width: 100%;
-}
-
-.service-page .service-hero-media {
-  min-width: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.service-page .service-hero-media:empty,
-.service-page .service-hero-media:not(:has(img)) {
-  display: none;
-}
-
-.service-page .service-hero-media img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1536 / 1024;
-  object-fit: contain;
-  border: 1px solid #393939;
-}
-
-@media (max-width: 960px) {
-  .service-page .service-hero-grid,
-  .service-page .service-hero-grid.has-media {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .service-page .service-hero-grid:has(.service-hero-media img) {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-}
-
-/* Retira la barra decorativa superior solo de las tarjetas con icono */
-.service-page #funciones .pts > div::before {
-  display: none;
-}
-
-/* Iconos SVG de las tarjetas de servicios */
-.service-page .service-card-icon {
-  display: block;
-  width: 32px;
-  height: 32px;
-  color: var(--blue);
-  margin-bottom: 20px;
-  flex-shrink: 0;
-}
 
 /* ---- página Detección de armamentos: más contenido ---- */
 .phero.psplit .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
@@ -516,42 +243,17 @@ ol.tl span{color:var(--ink2);font-size:14px}
 p.t{color:var(--ink2);font-size:18px;line-height:1.55;margin:0}
 @media(max-width:560px){.btn.alt{margin:8px 0 0;width:100%;justify-content:center}}
 
-/* ---- Portada móvil (hero de la página principal) ---- */
-@media(max-width:640px){
-  main.home .hero .wrap{
-    padding-top:36px;
-    padding-bottom:44px;
-    gap:32px;
-  }
-  main.home .hero h1{
-    font-size:clamp(28px,7.5vw,32px);
-    line-height:1.24;
-    letter-spacing:-.01em;
-    font-weight:500;
-    margin:0 0 16px;
-  }
-  main.home .hero p:not(.eyebrow){
-    font-size:16px;
-    line-height:1.5;
-    margin:0 0 28px;
-    max-width:100%;
-  }
-  main.home .hero .btn{
-    width:100%;
-    min-width:100%;
-  }
-  main.home .hero .btn.alt{
-    margin-top:10px;
-    margin-left:0;
-    width:100%;
-    justify-content:center;
-  }
-  main.home .hero .pic{
-    width:100%;
-  }
-  main.home .hero .pic img{
-    width:100%;
-    height:auto;
-    display:block;
-  }
-}
+/* ---- páginas de servicios con imagen de portada e íconos ---- */
+#resumen,#funciones,#como-funciona,#preguntas{scroll-margin-top:72px}
+.service-hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center;margin-top:8px}
+.service-hero-content{min-width:0}
+.service-hero-content .kick{margin-top:24px}
+.service-hero-content h1,.service-hero-content p:not(.kick){max-width:100%}
+.service-hero-media{min-width:0;display:flex;justify-content:center;align-items:center}
+.service-hero-media img{display:block;width:100%;height:auto;aspect-ratio:1536/1024;object-fit:contain;border:1px solid #393939}
+.service-nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:32px;font-size:14px}
+.service-nav a{color:#c6c6c6;padding-bottom:6px;border-bottom:1px solid #525252}
+.service-nav a:hover{color:#fff;border-color:#78a9ff}
+.service-page #funciones .pts>div::before{display:none}
+.service-card-icon{display:block;width:32px;height:32px;color:var(--blue);margin-bottom:20px;flex-shrink:0}
+@media(max-width:960px){.service-hero-grid{grid-template-columns:1fr;gap:32px}}
