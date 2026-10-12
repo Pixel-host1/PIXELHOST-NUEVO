@@ -602,6 +602,7 @@ footer .flogo img{display:block;height:44px;width:auto}
   scroll-margin-top: 72px;
 }
 
+.service-nav,
 .service-page .service-nav {
   display: flex;
   flex-wrap: wrap;
@@ -641,6 +642,7 @@ footer .flogo img{display:block;height:44px;width:auto}
 }
 
 /* Portada de servicios con estructura preparada para imagen */
+.service-hero-grid,
 .service-page .service-hero-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -649,6 +651,7 @@ footer .flogo img{display:block;height:44px;width:auto}
   margin-top: 8px;
 }
 
+.service-hero-grid.has-media,
 .service-page .service-hero-grid.has-media {
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
 }
@@ -721,6 +724,7 @@ footer .flogo img{display:block;height:44px;width:auto}
 }
 
 /* Iconos SVG de las tarjetas de servicios */
+.service-card-icon,
 .service-page .service-card-icon {
   display: block;
   width: 32px;
