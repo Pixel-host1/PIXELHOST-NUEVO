@@ -225,6 +225,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
 .menu{display:flex;flex:1}
 .menu>button,.menu>a{padding:0 16px;font-size:14px;color:var(--mast-nav-ink);display:flex;align-items:center;gap:6px;transition:background .15s ease,color .15s ease}
 .menu>button:hover,.menu>a:hover,.menu>button[aria-expanded=true]{background:var(--mast-hover);color:var(--mast-color)}
+.menu>button .chevron{display:inline-block;width:12px;height:12px;color:inherit;flex-shrink:0;transition:transform .2s ease}
+.menu>button[aria-expanded=true] .chevron{transform:rotate(180deg)}
 .tools{display:flex;align-items:stretch;margin-left:auto}
 .tools a,.tools button{padding:0 16px;font-size:14px;color:var(--mast-nav-ink);display:flex;align-items:center;transition:background .15s ease,color .15s ease}
 .tools a:hover,.tools button:hover{background:var(--mast-hover);color:var(--mast-color)}
@@ -376,14 +378,19 @@ footer a.libro{display:inline;font-weight:600;color:var(--footer-heading)}
   .menu>button:hover,.menu>a:hover{background:var(--mast-hover);color:var(--menu-ink)}
   .menu>button[aria-expanded="true"]{background:var(--mast-active);color:var(--menu-ink);border-bottom-color:var(--menu-line)}
   .menu>button .chevron{
-    display:inline-block;
-    transition:transform .2s ease;
-    font-size:11px;
-    color:var(--menu-ink2)
+    width:20px;
+    height:20px;
+    min-width:20px;
+    min-height:20px;
+    display:block;
+    flex-shrink:0;
+    margin-left:auto;
+    color:currentColor;
+    transform-origin:center;
+    transition:transform .2s ease
   }
   .menu>button[aria-expanded="true"] .chevron{
-    transform:rotate(180deg);
-    color:var(--blue)
+    transform:rotate(180deg)
   }
 
   /* Submenú desplegable de Soluciones dentro del panel */
