@@ -603,7 +603,14 @@ footer .flogo{display:inline-block;background:#fff;padding:10px 16px;border:1px 
 footer .flogo img{display:block;height:44px;width:auto}
 
 /* ---- Páginas de servicios (detección de armamentos, telemetría, flotas y activos) ---- */
+#resumen,
+#que-detecta,
+#funciones,
+#como-funciona,
+#preguntas,
 .service-page #resumen,
+.service-page #que-detecta,
+.service-page #funciones,
 .service-page #como-funciona,
 .service-page #preguntas {
   scroll-margin-top: 72px;
@@ -675,6 +682,7 @@ footer .flogo img{display:block;height:44px;width:auto}
   margin-top: 24px;
 }
 
+.service-hero-content h1,
 .service-page .service-hero-content h1 {
   max-width: 100%;
 }
@@ -683,6 +691,7 @@ footer .flogo img{display:block;height:44px;width:auto}
   max-width: 680px;
 }
 
+.service-hero-grid.has-media .service-hero-content p:not(.kick),
 .service-page .service-hero-grid.has-media .service-hero-content p:not(.kick) {
   max-width: 100%;
 }
