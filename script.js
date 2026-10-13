@@ -24,6 +24,7 @@
     bg.setAttribute('aria-expanded', 'true');
     bg.setAttribute('aria-label', 'Cerrar menú');
     document.body.classList.add('menu-open');
+    if (typeof updateScrollTopVisibility === 'function') updateScrollTopVisibility();
     var firstFocusable = menu.querySelector('button, a, [tabindex="0"]');
     if (firstFocusable) {
       firstFocusable.focus();
@@ -38,6 +39,7 @@
     bg.setAttribute('aria-label', 'Abrir menú');
     document.body.classList.remove('menu-open');
     closeMegas();
+    if (typeof updateScrollTopVisibility === 'function') updateScrollTopVisibility();
     if (restoreFocus || hadFocusInside) {
       bg.focus();
     }
@@ -242,5 +244,128 @@
       window.scrollTo(0, 0);
     });
     document.getElementById('lprint').addEventListener('click', function(){ window.print(); });
+  }
+
+  // ---- Botón "Volver arriba" ----
+  var scrollTopBtn = document.getElementById('scroll-top');
+  var SCROLL_THRESHOLD = 400;
+  var isScrollTopVisible = false;
+  var scrollTicking = false;
+
+  function getPrefersReducedMotion() {
+    try {
+      return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function moveFocusToTop() {
+    var topTarget = document.querySelector('.mast .logo') || document.querySelector('header a, header button') || document.body;
+    if (topTarget) {
+      if (topTarget === document.body && !topTarget.hasAttribute('tabindex')) {
+        topTarget.setAttribute('tabindex', '-1');
+      }
+      try {
+        topTarget.focus({ preventScroll: true });
+      } catch (e) {
+        topTarget.focus();
+      }
+    } else if (scrollTopBtn) {
+      scrollTopBtn.blur();
+    }
+  }
+
+  function setScrollTopVisible(visible) {
+    if (!scrollTopBtn) return;
+    isScrollTopVisible = visible;
+    if (visible) {
+      scrollTopBtn.classList.add('visible');
+      scrollTopBtn.setAttribute('tabindex', '0');
+      scrollTopBtn.setAttribute('aria-hidden', 'false');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+      scrollTopBtn.setAttribute('tabindex', '-1');
+      scrollTopBtn.setAttribute('aria-hidden', 'true');
+      if (document.activeElement === scrollTopBtn) {
+        moveFocusToTop();
+      }
+    }
+  }
+
+  function updateScrollTopVisibility() {
+    if (!scrollTopBtn) return;
+    if (isMenuOpen()) {
+      if (isScrollTopVisible) {
+        setScrollTopVisible(false);
+      }
+      return;
+    }
+
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+    var shouldShow = scrollY > SCROLL_THRESHOLD;
+
+    if (shouldShow !== isScrollTopVisible) {
+      setScrollTopVisible(shouldShow);
+    }
+  }
+
+  function handleScrollTopClick() {
+    var reduced = getPrefersReducedMotion();
+
+    try {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: reduced ? 'auto' : 'smooth'
+      });
+    } catch (e) {
+      window.scrollTo(0, 0);
+    }
+
+    if (reduced) {
+      moveFocusToTop();
+    } else {
+      var focused = false;
+      var onScrollEnd = function() {
+        if (!focused) {
+          focused = true;
+          window.removeEventListener('scrollend', onScrollEnd);
+          moveFocusToTop();
+        }
+      };
+
+      if ('onscrollend' in window) {
+        window.addEventListener('scrollend', onScrollEnd, { once: true });
+      }
+
+      setTimeout(function() {
+        if (!focused && (window.pageYOffset || document.documentElement.scrollTop || 0) < 50) {
+          focused = true;
+          window.removeEventListener('scrollend', onScrollEnd);
+          moveFocusToTop();
+        }
+      }, 700);
+    }
+  }
+
+  if (scrollTopBtn) {
+    scrollTopBtn.setAttribute('tabindex', '-1');
+    scrollTopBtn.setAttribute('aria-hidden', 'true');
+    scrollTopBtn.classList.remove('visible');
+
+    scrollTopBtn.addEventListener('click', handleScrollTopClick);
+
+    window.addEventListener('scroll', function() {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(function() {
+          updateScrollTopVisibility();
+          scrollTicking = false;
+        });
+        scrollTicking = true;
+      }
+    }, { passive: true });
+
+    updateScrollTopVisibility();
   }
 })();
