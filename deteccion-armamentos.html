@@ -5,24 +5,383 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Detección de armamentos por IA · KreaLab TECH</title>
 <meta name="description" content="Detección de pistolas, granadas y otras armas con IA: alarma local y mensaje con foto a su celular.">
+<link rel="icon" type="image/png" href="Media/PixelHost-Logo.png">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<script>(function(){try{var t=localStorage.getItem('pixelhost-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}else{var d=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';document.documentElement.setAttribute('data-theme',d);}}catch(e){}})();</script>
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<header class="mast">
+<body class="service-page seguridad-page">
+  <header class="mast">
 <div class="wrap"><div class="bar">
-<button class="burger" aria-label="Abrir menú" id="bg">Menú</button>
+<button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu" id="bg"><svg class="icon-menu" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><rect x="2" y="4" width="16" height="2"></rect><rect x="2" y="9" width="16" height="2"></rect><rect x="2" y="14" width="16" height="2"></rect></svg><svg class="icon-close" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="4" x2="16" y2="16"></line><line x1="16" y1="4" x2="4" y2="16"></line></svg></button>
 <a class="logo" href="index.html">KreaLab TECH</a>
 <nav class="menu" id="menu" aria-label="Principal">
-<button aria-expanded="false" aria-controls="m1">Soluciones ▾</button>
+<button aria-expanded="false" aria-controls="m1">Soluciones <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+<div class="mega" id="m1"><div class="wrap"><div><b>Seguridad con IA</b><a href="deteccion-armamentos.html">Resumen</a><a href="deteccion-armamentos.html#como-funciona">Cómo funciona</a><a href="deteccion-armamentos.html#preguntas">Preguntas frecuentes</a></div><div><b>Desarrollo con IA</b><a href="desarrollo-ia.html">Resumen</a><a href="desarrollo-ia.html#como-funciona">Cómo funciona</a><a href="desarrollo-ia.html#preguntas">Preguntas frecuentes</a></div><div><b>Telemetría</b><a href="telemetria.html">Resumen</a><a href="telemetria.html#como-funciona">Cómo funciona</a><a href="telemetria.html#preguntas">Preguntas frecuentes</a></div><div><b>Flotas y activos</b><a href="flotas-activos.html">Resumen</a><a href="flotas-activos.html#como-funciona">Cómo funciona</a><a href="flotas-activos.html#preguntas">Preguntas frecuentes</a></div></div></div>
 <a href="nosotros.html">Nosotros</a><a href="soporte.html">Soporte</a><a href="contacto.html">Contacto</a>
 </nav>
-<div class="tools"><a class="hide" href="libro-de-reclamaciones.html">Libro de Reclamaciones</a></div>
+<div class="tools"><a class="hide" href="libro-de-reclamaciones.html">Libro de Reclamaciones</a><button type="button" class="theme-btn" id="theme-btn" aria-label="Activar modo oscuro" title="Activar modo oscuro"><svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="3.5"></circle><line x1="10" y1="2" x2="10" y2="4"></line><line x1="10" y1="16" x2="10" y2="18"></line><line x1="2" y1="10" x2="4" y2="10"></line><line x1="16" y1="10" x2="18" y2="10"></line><line x1="4.34" y1="4.34" x2="5.76" y2="5.76"></line><line x1="14.24" y1="14.24" x2="15.66" y2="15.66"></line><line x1="4.34" y1="15.66" x2="5.76" y2="14.24"></line><line x1="14.24" y1="5.76" x2="15.66" y2="4.34"></line></svg><svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg></button></div>
 </div></div>
-<div class="mega" id="m1"><div class="wrap"><div><b>Seguridad con IA</b><a href="deteccion-armamentos.html">Resumen</a><a href="deteccion-armamentos.html#como-funciona">Cómo funciona</a><a href="deteccion-armamentos.html#preguntas">Preguntas frecuentes</a></div><div><b>Desarrollo con IA</b><a href="desarrollo-ia.html">Resumen</a><a href="desarrollo-ia.html#como-funciona">Cómo funciona</a><a href="desarrollo-ia.html#preguntas">Preguntas frecuentes</a></div><div><b>Telemetría</b><a href="telemetria.html">Resumen</a><a href="telemetria.html#como-funciona">Cómo funciona</a><a href="telemetria.html#preguntas">Preguntas frecuentes</a></div><div><b>Flotas y activos</b><a href="flotas-activos.html">Resumen</a><a href="flotas-activos.html#como-funciona">Cómo funciona</a><a href="flotas-activos.html#preguntas">Preguntas frecuentes</a></div></div></div>
 </header>
-<main><div class="phero psplit"><div class="wrap"><nav class="crumb" aria-label="Ruta"><a href="index.html">Inicio</a> / Detección de armamentos por IA</nav><div><p class="kick">Seguridad con IA · Detección de armas</p><h1>Detección de pistolas, granadas y otras armas con IA</h1><p>Su cámara reconoce armas y objetos peligrosos, activa una alarma sonora local y envía de inmediato una foto con recuadros a los dueños y al personal de seguridad. Pensado para bodegas, pequeños negocios y choferes.</p><a class="btn" href="contacto.html">Solicitar demostración <span>→</span></a><a class="btn alt" href="#que-detecta">Qué detecta</a><ul class="pills"><li>Pistolas</li><li>Granadas</li><li>Alarma local</li><li>Mensaje con foto</li></ul></div><div class="pic"><img src="Media/deteccion-pistola-motociclista.jpg" alt="Cámara de seguridad de una tienda que detecta a un motociclista con casco y marca con recuadros a la persona y a la pistola que sostiene" width="1536" height="1024"></div></div></div><section id="que-detecta"><div class="wrap"><h2>Qué detecta</h2><div class="ft c4"><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg><h3>Pistolas y revólveres</h3><p>Reconoce armas cortas de fuego visibles ante la cámara, en la mano de una persona.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="14.5" r="6.5"/><path d="M9.5 8.2h5M12 8.2V4.5M12 4.5h3.2"/><path d="M9 13.5a3.5 3.5 0 0 1 3-3"/></svg><h3>Granadas</h3><p>Identifica granadas y otros objetos peligrosos que aparezcan en la imagen.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3"/><circle cx="12" cy="12" r="3"/></svg><h3>Otras armas de fuego</h3><p>Reconoce también armas largas, según el modelo que se configure para su caso.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><h3>Persona armada</h3><p>Relaciona al arma con la persona, para que vea quién la porta y dónde está.</p></div></div><p class="box" style="margin-top:24px">El conjunto exacto de armas y objetos que reconoce se define y se prueba con su cámara durante la demostración.</p></div></section><div class="impact"><div class="wrap"><h2>Una alerta clara, no una sospecha</h2><div class="g3"><div><span class="n">01</span><p class="big">Marca a la persona</p><p>Un recuadro rodea a la persona o al vehículo, para ubicarla de un vistazo.</p></div><div><span class="n">02</span><p class="big">Marca el arma</p><p>Otro recuadro señala el arma detectada, para que vea qué disparó la alerta.</p></div><div><span class="n">03</span><p class="big">Envía la foto</p><p>La imagen con los recuadros llega al celular de los dueños y del personal de seguridad.</p></div></div><p class="fine">La detección depende de la calidad de imagen, el ángulo y la distancia de la cámara. Es una herramienta de apoyo: ante una emergencia, llame a las autoridades.</p></div></div><section id="funciones" class="layer"><div class="wrap"><h2>Todo en una sola solución</h2><div class="ft "><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 16V11a6 6 0 1 0-12 0v5l-2 2h16z"/><path d="M10 21h4"/></svg><h3>Alerta automática</h3><p>Apenas la IA reconoce un arma, dispara la alerta sin que nadie tenga que pulsar un botón.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18v-6a5 5 0 0 1 10 0v6"/><path d="M5 18h14v3H5z"/><path d="M12 3v2M4.5 6l1.5 1.5M19.5 6L18 7.5"/></svg><h3>Alarma sonora local</h3><p>Una alarma en el lugar disuade al delincuente y avisa de inmediato a vecinos y habitantes.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg><h3>Mensaje con foto</h3><p>La foto con el arma marcada llega al celular de uno o varios dueños y al personal de seguridad.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><h3>Verificación humana</h3><p>Una persona confirma la imagen antes de actuar, para evitar reacciones por una falsa alerta.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5a3 2.5 0 0 0-3-1.5c-1.7 0-3 .9-3 2s1.3 2 3 2 3 .9 3 2-1.3 2-3 2a3 2.5 0 0 1-3-1.5"/><path d="M12 6v2M12 16v2"/></svg><h3>Costo asequible</h3><p>Un precio accesible para bodegas, pequeños negocios y choferes, sin equipos complejos.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4M10 12h6M10 16h6"/></svg><h3>Historial de incidentes</h3><p>Consulte las alertas pasadas con fecha, hora y la imagen de cada detección.</p></div></div></div></section><section id="como-funciona"><div class="wrap"><h2>Cómo funciona</h2><div class="flow"><div><span class="n">Paso 1</span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13.5" r="3.5"/><path d="M8 7l1.5-3h5L16 7"/></svg><h3>Mira</h3><p>La cámara de su local o unidad envía el video al sistema.</p></div><div><span class="n">Paso 2</span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="1.5"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg><h3>Reconoce</h3><p>La IA analiza el video de forma continua en busca de pistolas, granadas y otras armas.</p></div><div><span class="n">Paso 3</span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18v-6a5 5 0 0 1 10 0v6"/><path d="M5 18h14v3H5z"/><path d="M12 3v2M4.5 6l1.5 1.5M19.5 6L18 7.5"/></svg><h3>Alerta</h3><p>Si reconoce un arma, activa la alarma local y envía la foto con los recuadros.</p></div><div><span class="n">Paso 4</span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg><h3>Decide</h3><p>Usted y su personal verifican la imagen y deciden cómo actuar.</p></div></div></div></section><section class="layer"><div class="wrap"><h2>¿Dónde se usa?</h2><div class="ft c4"><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l2-5h14l2 5"/><path d="M4 9v11h16V9"/><path d="M10 20v-6h4v6"/></svg><h3>Bodegas y minimarkets</h3><p>Alerta al dueño y al vecindario ante una persona armada en la puerta.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l2-5h14l2 5"/><path d="M4 9v11h16V9"/><path d="M10 20v-6h4v6"/></svg><h3>Tiendas y pequeños negocios</h3><p>Seguridad con IA sin personal de vigilancia permanente.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h12v10H2z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg><h3>Choferes y transportistas</h3><p>Aviso con foto para quien trabaja en ruta y lleva carga valiosa.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg><h3>Colegios y recintos</h3><p>Apoyo al personal de seguridad en accesos y entradas.</p></div></div></div></section><section><div class="wrap"><h2>Tecnología con responsabilidad</h2><div class="ft c3"><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><h3>La persona decide</h3><p>La IA propone y usted confirma con la foto. Ninguna decisión queda solo en manos del sistema.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><h3>Privacidad</h3><p>Las imágenes se usan solo para la seguridad del servicio, según nuestra <a href="privacidad.html" style="text-decoration:underline">Política de Privacidad</a>.</p></div><div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg><h3>Apoyo, no reemplazo</h3><p>No sustituye a las autoridades ni al personal de seguridad.</p></div></div></div></section><section id="preguntas" class="layer"><div class="wrap two"><div><h2>Preguntas frecuentes</h2></div><div><details><summary>¿Qué armas detecta?</summary><p>Está pensado para reconocer pistolas y revólveres, otras armas de fuego y objetos peligrosos como granadas. El alcance exacto se define en la demostración según su caso.</p></details><details><summary>¿Detecta granadas?</summary><p>Sí está contemplado, siempre que el objeto sea visible ante la cámara. La precisión depende del modelo configurado, la calidad de imagen y el ángulo; lo probamos con su cámara.</p></details><details><summary>¿Qué pasa si la persona lleva casco o cubre el arma?</summary><p>La detección depende de que el arma sea visible para la cámara. Si queda cubierta, el sistema puede no reconocerla; por eso es una herramienta de apoyo.</p></details><details><summary>¿Puede confundir un objeto con un arma?</summary><p>Ningún sistema es perfecto. Por eso cada alerta llega con una foto y recuadros para que una persona la verifique antes de actuar.</p></details><details><summary>¿Necesito comprar cámaras nuevas?</summary><p>Evaluamos si sus cámaras actuales son compatibles. En la demostración revisamos su caso y le indicamos qué necesita.</p></details><details><summary>¿Reemplaza a la policía o al personal de seguridad?</summary><p>No. Ante una emergencia debe contactar a las autoridades.</p></details><details><summary>¿Cuántos celulares reciben el mensaje?</summary><p>Uno o varios. Usted define la lista de dueños y de personal de seguridad.</p></details><details><summary>¿Cuánto cuesta?</summary><p>Buscamos un costo asequible para negocios pequeños. El precio depende de su caso y se detalla en la demostración.</p></details></div></div></section><p class="box" style="max-width:1584px;margin:0 auto 40px;padding:16px 32px">Importante: este sistema es un apoyo y no garantiza detectar todas las situaciones. Ante una emergencia, llame a las autoridades.</p><div class="cta"><div class="wrap"><h2>Solicite una demostración de 30 minutos</h2><a class="btn" href="contacto.html">Agendar demostración <span>→</span></a></div></div></main>
-<footer><div class="wrap">
+
+  <main>
+    <div class="phero" id="resumen">
+      <div class="wrap">
+        <nav class="crumb" aria-label="Ruta">
+          <a href="index.html">Inicio</a> /
+          Detección de armamentos por IA
+        </nav>
+
+        <div class="service-hero-grid has-media">
+          <div class="service-hero-content">
+            <p class="kick">Seguridad con IA · Detección de armas</p>
+            <h1>Detección de pistolas, granadas y otras armas con IA</h1>
+            <p>
+              Su cámara reconoce armas y objetos peligrosos, activa una alarma sonora local y envía de inmediato una foto con recuadros a los dueños y al personal de seguridad. Pensado para bodegas, pequeños negocios y choferes.
+            </p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+              <a class="btn" href="contacto.html">
+                Solicitar demostración <span aria-hidden="true">→</span>
+              </a>
+              <a class="btn alt" href="#que-detecta">
+                Qué detecta
+              </a>
+            </div>
+
+            <ul class="pills">
+              <li>Pistolas</li>
+              <li>Granadas</li>
+              <li>Alarma local</li>
+              <li>Mensaje con foto</li>
+            </ul>
+
+            <nav class="service-nav" aria-label="Secciones de Seguridad con IA">
+              <a href="#que-detecta">Qué detecta</a>
+              <a href="#funciones">Qué incluye</a>
+              <a href="#como-funciona">Cómo funciona</a>
+              <a href="#preguntas">Preguntas frecuentes</a>
+            </nav>
+          </div>
+
+          <div class="service-hero-media">
+            <img src="Media/seguridad-ia.png" alt="Sistema de detección de armamentos por inteligencia artificial" width="1536" height="1024">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="que-detecta">
+      <div class="wrap">
+        <h2>Qué detecta</h2>
+        <div class="ft c4">
+          <div>
+            <svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="8"></circle>
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path>
+            </svg>
+            <h3>Pistolas y revólveres</h3>
+            <p>Reconoce armas cortas de fuego visibles ante la cámara, en la mano de una persona.</p>
+          </div>
+          <div>
+            <svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="14.5" r="6.5"></circle>
+              <path d="M9.5 8.2h5M12 8.2V4.5M12 4.5h3.2"></path>
+              <path d="M9 13.5a3.5 3.5 0 0 1 3-3"></path>
+            </svg>
+            <h3>Granadas</h3>
+            <p>Identifica granadas y otros objetos peligrosos que aparezcan en la imagen.</p>
+          </div>
+          <div>
+            <svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <h3>Otras armas de fuego</h3>
+            <p>Reconoce también armas largas, según el modelo que se configure para su caso.</p>
+          </div>
+          <div>
+            <svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <h3>Persona armada</h3>
+            <p>Relaciona al arma con la persona, para que vea quién la porta y dónde está.</p>
+          </div>
+        </div>
+        <p class="box" style="margin-top:24px">El conjunto exacto de armas y objetos que reconoce se define y se prueba con su cámara durante la demostración.</p>
+      </div>
+    </section>
+
+    <div class="impact">
+      <div class="wrap">
+        <h2>Una alerta clara, no una sospecha</h2>
+        <div class="g3">
+          <div>
+            <span class="n">01</span>
+            <p class="big">Marca a la persona</p>
+            <p>Un recuadro rodea a la persona o al vehículo, para ubicarla de un vistazo.</p>
+          </div>
+          <div>
+            <span class="n">02</span>
+            <p class="big">Marca el arma</p>
+            <p>Otro recuadro señala el arma detectada, para que vea qué disparó la alerta.</p>
+          </div>
+          <div>
+            <span class="n">03</span>
+            <p class="big">Envía la foto</p>
+            <p>La imagen con los recuadros llega al celular de los dueños y del personal de seguridad.</p>
+          </div>
+        </div>
+        <div style="margin-top:32px;display:flex;justify-content:center;">
+          <img src="Media/deteccion-pistola-motociclista.jpg" alt="Cámara de seguridad de una tienda que detecta a un motociclista con casco y marca con recuadros a la persona y a la pistola que sostiene" width="1536" height="1024" style="max-width:100%;height:auto;border:1px solid var(--hero-line, #393939);display:block;">
+        </div>
+        <p class="fine">La detección depende de la calidad de imagen, el ángulo y la distancia de la cámara. Es una herramienta de apoyo: ante una emergencia, llame a las autoridades.</p>
+      </div>
+    </div>
+
+    <section id="funciones" class="layer">
+      <div class="wrap">
+        <h2>Todo en una sola solución</h2>
+        <div class="ft c3">
+          <div>
+            <svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 16V11a6 6 0 1 0-12 0v5l-2 2h16z"></path>
+              <path d="M10 21h4"></path>
+            </svg>
+            <h3>Alerta automática</h3>
+            <p>Apenas la IA reconoce un arma, dispara la alerta sin que nadie tenga que pulsar un botón.</p>
+          </div>
+
+          <div>
+            <svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 18v-6a5 5 0 0 1 10 0v6"></path>
+              <path d="M5 18h14v3H5z"></path>
+              <path d="M12 3v2M4.5 6l1.5 1.5M19.5 6L18 7.5"></path>
+            </svg>
+            <h3>Alarma sonora local</h3>
+            <p>Una alarma en el lugar disuade al delincuente y avisa de inmediato a vecinos y habitantes.</p>
+          </div>
+
+          <div>
+            <svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="7" y="2" width="10" height="20" rx="2"></rect>
+              <path d="M11 18h2"></path>
+            </svg>
+            <h3>Mensaje con foto</h3>
+            <p>La foto con el arma marcada llega al celular de uno o varios dueños y al personal de seguridad.</p>
+          </div>
+
+          <div>
+            <svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <h3>Verificación humana</h3>
+            <p>Una persona confirma la imagen antes de actuar, para evitar reacciones por una falsa alerta.</p>
+          </div>
+
+          <div>
+            <svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M15 9.5a3 2.5 0 0 0-3-1.5c-1.7 0-3 .9-3 2s1.3 2 3 2 3 .9 3 2-1.3 2-3 2a3 2.5 0 0 1-3-1.5"></path>
+              <path d="M12 6v2M12 16v2"></path>
+            </svg>
+            <h3>Costo asequible</h3>
+            <p>Un precio accesible para bodegas, pequeños negocios y choferes, sin equipos complejos.</p>
+          </div>
+
+          <div>
+            <svg class="service-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 3h8l4 4v14H7z"></path>
+              <path d="M15 3v4h4M10 12h6M10 16h6"></path>
+            </svg>
+            <h3>Historial de incidentes</h3>
+            <p>Consulte las alertas pasadas con fecha, hora y la imagen de cada detección.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona">
+      <div class="wrap">
+        <h2>Cómo funciona</h2>
+        <div class="flow">
+          <div>
+            <span class="n">Paso 1</span>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+              <circle cx="12" cy="13.5" r="3.5"></circle>
+              <path d="M8 7l1.5-3h5L16 7"></path>
+            </svg>
+            <h3>Mira</h3>
+            <p>La cámara de su local o unidad envía el video al sistema.</p>
+          </div>
+          <div>
+            <span class="n">Paso 2</span>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="6" y="6" width="12" height="12" rx="1.5"></rect>
+              <path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"></path>
+            </svg>
+            <h3>Reconoce</h3>
+            <p>La IA analiza el video de forma continua en busca de pistolas, granadas y otras armas.</p>
+          </div>
+          <div>
+            <span class="n">Paso 3</span>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 18v-6a5 5 0 0 1 10 0v6"></path>
+              <path d="M5 18h14v3H5z"></path>
+              <path d="M12 3v2M4.5 6l1.5 1.5M19.5 6L18 7.5"></path>
+            </svg>
+            <h3>Alerta</h3>
+            <p>Si reconoce un arma, activa la alarma local y envía la foto con los recuadros.</p>
+          </div>
+          <div>
+            <span class="n">Paso 4</span>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="7" y="2" width="10" height="20" rx="2"></rect>
+              <path d="M11 18h2"></path>
+            </svg>
+            <h3>Decide</h3>
+            <p>Usted y su personal verifican la imagen y deciden cómo actuar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="layer">
+      <div class="wrap">
+        <h2>¿Dónde se usa?</h2>
+        <div class="ft c4">
+          <div>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 9l2-5h14l2 5"></path>
+              <path d="M4 9v11h16V9"></path>
+              <path d="M10 20v-6h4v6"></path>
+            </svg>
+            <h3>Bodegas y minimarkets</h3>
+            <p>Alerta al dueño y al vecindario ante una persona armada en la puerta.</p>
+          </div>
+          <div>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 9l2-5h14l2 5"></path>
+              <path d="M4 9v11h16V9"></path>
+              <path d="M10 20v-6h4v6"></path>
+            </svg>
+            <h3>Tiendas y pequeños negocios</h3>
+            <p>Seguridad con IA sin personal de vigilancia permanente.</p>
+          </div>
+          <div>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 6h12v10H2z"></path>
+              <path d="M14 10h4l3 3v3h-7z"></path>
+              <circle cx="7" cy="18" r="2"></circle>
+              <circle cx="17" cy="18" r="2"></circle>
+            </svg>
+            <h3>Choferes y transportistas</h3>
+            <p>Aviso con foto para quien trabaja en ruta y lleva carga valiosa.</p>
+          </div>
+          <div>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path>
+              <path d="M8.5 12l2.5 2.5L16 9.5"></path>
+            </svg>
+            <h3>Colegios y recintos</h3>
+            <p>Apoyo al personal de seguridad en accesos y entradas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Tecnología con responsabilidad</h2>
+        <div class="ft c3">
+          <div>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <h3>La persona decide</h3>
+            <p>La IA propone y usted confirma con la foto. Ninguna decisión queda solo en manos del sistema.</p>
+          </div>
+          <div>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="5" y="11" width="14" height="10" rx="2"></rect>
+              <path d="M8 11V8a4 4 0 0 1 8 0v3"></path>
+            </svg>
+            <h3>Privacidad</h3>
+            <p>Las imágenes se usan solo para la seguridad del servicio, según nuestra <a href="privacidad.html" style="text-decoration:underline">Política de Privacidad</a>.</p>
+          </div>
+          <div>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path>
+              <path d="M8.5 12l2.5 2.5L16 9.5"></path>
+            </svg>
+            <h3>Apoyo, no reemplazo</h3>
+            <p>No sustituye a las autoridades ni al personal de seguridad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="preguntas" class="layer">
+      <div class="wrap two">
+        <div>
+          <h2>Preguntas frecuentes</h2>
+        </div>
+        <div>
+          <details>
+            <summary>¿Qué armas detecta?</summary>
+            <p>Está pensado para reconocer pistolas y revólveres, otras armas de fuego y objetos peligrosos como granadas. El alcance exacto se define en la demostración según su caso.</p>
+          </details>
+          <details>
+            <summary>¿Detecta granadas?</summary>
+            <p>Sí está contemplado, siempre que el objeto sea visible ante la cámara. La precisión depende del modelo configurado, la calidad de imagen y el ángulo; lo probamos con su cámara.</p>
+          </details>
+          <details>
+            <summary>¿Qué pasa si la persona lleva casco o cubre el arma?</summary>
+            <p>La detección depende de que el arma sea visible para la cámara. Si queda cubierta, el sistema puede no reconocerla; por eso es una herramienta de apoyo.</p>
+          </details>
+          <details>
+            <summary>¿Puede confundir un objeto con un arma?</summary>
+            <p>Ningún sistema es perfecto. Por eso cada alerta llega con una foto y recuadros para que una persona la verifique antes de actuar.</p>
+          </details>
+          <details>
+            <summary>¿Necesito comprar cámaras nuevas?</summary>
+            <p>Evaluamos si sus cámaras actuales son compatibles. En la demostración revisamos su caso y le indicamos qué necesita.</p>
+          </details>
+          <details>
+            <summary>¿Reemplaza a la policía o al personal de seguridad?</summary>
+            <p>No. Ante una emergencia debe contactar a las autoridades.</p>
+          </details>
+          <details>
+            <summary>¿Cuántos celulares reciben el mensaje?</summary>
+            <p>Uno o varios. Usted define la lista de dueños y de personal de seguridad.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto cuesta?</summary>
+            <p>Buscamos un costo asequible para negocios pequeños. El precio depende de su caso y se detalla en la demostración.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <p class="box" style="max-width:1584px;margin:0 auto 40px;padding:16px 32px">
+      Importante: este sistema es un apoyo y no garantiza detectar todas las situaciones. Ante una emergencia, llame a las autoridades.
+    </p>
+
+    <div class="cta">
+      <div class="wrap">
+        <h2>Solicite una demostración de 30 minutos</h2>
+        <a class="btn" href="contacto.html">
+          Agendar demostración <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer><div class="wrap">
 <div class="loc"><span>KreaLab TECH</span><a href="#" style="padding:0">Perú / Español</a></div>
 <div class="cols">
 <div><b>Soluciones</b><a href="deteccion-armamentos.html">Detección de armamentos por IA</a><a href="desarrollo-ia.html">Desarrollo de software con IA</a><a href="telemetria.html">Telemetría</a><a href="flotas-activos.html">Flotas y activos</a></div>
@@ -33,6 +392,9 @@
 </div>
 <div class="legal"><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a class="libro" href="libro-de-reclamaciones.html">Libro de Reclamaciones</a><span>© 2026 KreaLab TECH. Todos los derechos reservados.</span></div>
 </div></footer>
+<button type="button" class="scroll-top" id="scroll-top" aria-label="Volver al principio" title="Volver arriba" tabindex="-1" aria-hidden="true">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
 <script src="script.js"></script>
 </body>
 </html>

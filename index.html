@@ -5,22 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Detección de armas con IA, software y telemetría · KreaLab TECH</title>
 <meta name="description" content="IA para seguridad, software y telemetría.">
+<link rel="icon" type="image/png" href="Media/PixelHost-Logo.png">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<script>(function(){try{var t=localStorage.getItem('pixelhost-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}else{var d=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';document.documentElement.setAttribute('data-theme',d);}}catch(e){}})();</script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="mast">
 <div class="wrap"><div class="bar">
-<button class="burger" aria-label="Abrir menú" id="bg">Menú</button>
+<button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu" id="bg"><svg class="icon-menu" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><rect x="2" y="4" width="16" height="2"></rect><rect x="2" y="9" width="16" height="2"></rect><rect x="2" y="14" width="16" height="2"></rect></svg><svg class="icon-close" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="4" x2="16" y2="16"></line><line x1="16" y1="4" x2="4" y2="16"></line></svg></button>
 <a class="logo" href="index.html">KreaLab TECH</a>
 <nav class="menu" id="menu" aria-label="Principal">
-<button aria-expanded="false" aria-controls="m1">Soluciones ▾</button>
+<button aria-expanded="false" aria-controls="m1">Soluciones <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+<div class="mega" id="m1"><div class="wrap"><div><b>Seguridad con IA</b><a href="deteccion-armamentos.html">Resumen</a><a href="deteccion-armamentos.html#como-funciona">Cómo funciona</a><a href="deteccion-armamentos.html#preguntas">Preguntas frecuentes</a></div><div><b>Desarrollo con IA</b><a href="desarrollo-ia.html">Resumen</a><a href="desarrollo-ia.html#como-funciona">Cómo funciona</a><a href="desarrollo-ia.html#preguntas">Preguntas frecuentes</a></div><div><b>Telemetría</b><a href="telemetria.html">Resumen</a><a href="telemetria.html#como-funciona">Cómo funciona</a><a href="telemetria.html#preguntas">Preguntas frecuentes</a></div><div><b>Flotas y activos</b><a href="flotas-activos.html">Resumen</a><a href="flotas-activos.html#como-funciona">Cómo funciona</a><a href="flotas-activos.html#preguntas">Preguntas frecuentes</a></div></div></div>
 <a href="nosotros.html">Nosotros</a><a href="soporte.html">Soporte</a><a href="contacto.html">Contacto</a>
 </nav>
-<div class="tools"><a class="hide" href="libro-de-reclamaciones.html">Libro de Reclamaciones</a></div>
+<div class="tools"><a class="hide" href="libro-de-reclamaciones.html">Libro de Reclamaciones</a><button type="button" class="theme-btn" id="theme-btn" aria-label="Activar modo oscuro" title="Activar modo oscuro"><svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="3.5"></circle><line x1="10" y1="2" x2="10" y2="4"></line><line x1="10" y1="16" x2="10" y2="18"></line><line x1="2" y1="10" x2="4" y2="10"></line><line x1="16" y1="10" x2="18" y2="10"></line><line x1="4.34" y1="4.34" x2="5.76" y2="5.76"></line><line x1="14.24" y1="14.24" x2="15.66" y2="15.66"></line><line x1="4.34" y1="15.66" x2="5.76" y2="14.24"></line><line x1="14.24" y1="5.76" x2="15.66" y2="4.34"></line></svg><svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg></button></div>
 </div></div>
-<div class="mega" id="m1"><div class="wrap"><div><b>Seguridad con IA</b><a href="deteccion-armamentos.html">Resumen</a><a href="deteccion-armamentos.html#como-funciona">Cómo funciona</a><a href="deteccion-armamentos.html#preguntas">Preguntas frecuentes</a></div><div><b>Desarrollo con IA</b><a href="desarrollo-ia.html">Resumen</a><a href="desarrollo-ia.html#como-funciona">Cómo funciona</a><a href="desarrollo-ia.html#preguntas">Preguntas frecuentes</a></div><div><b>Telemetría</b><a href="telemetria.html">Resumen</a><a href="telemetria.html#como-funciona">Cómo funciona</a><a href="telemetria.html#preguntas">Preguntas frecuentes</a></div><div><b>Flotas y activos</b><a href="flotas-activos.html">Resumen</a><a href="flotas-activos.html#como-funciona">Cómo funciona</a><a href="flotas-activos.html#preguntas">Preguntas frecuentes</a></div></div></div>
 </header>
 <main class="home">
 <div class="hero"><div class="wrap">
@@ -34,7 +36,7 @@
 <div><p class="eyebrow">Servicio 01 · Seguridad con IA</p><h2>Detección de pistolas, granadas y otras armas</h2><p class="t">Un negocio pequeño no puede tener vigilancia las 24 horas. La IA sí puede mirar de forma continua y marcar a la persona y al arma, para que usted decida con información clara.</p>
 <ul class="ck"><li>Reconoce pistolas, revólveres y otras armas de fuego</li><li>Identifica granadas y objetos peligrosos visibles ante la cámara</li><li>Alarma sonora local que disuade y avisa a vecinos y habitantes</li><li>Mensaje con foto y recuadros a los dueños y al personal de seguridad</li></ul>
 <a class="btn" href="deteccion-armamentos.html">Ver el servicio <span>→</span></a></div>
-<div class="pic"><img src="Media/deteccion.png" alt="Celular con una alerta de seguridad y una sirena" width="800" height="520" loading="lazy"></div></div></section>
+<div class="pic"><img src="Media/deteccion.png" alt="Celular con una alerta de seguridad y una sirena" width="1600" height="1040" loading="lazy"></div></div></section>
 <div class="impact"><div class="wrap"><h2>Qué detecta y qué recibe usted</h2><div class="g3">
 <div><span class="n">01</span><p class="big">Detecta</p><p>La IA reconoce pistolas, granadas y otras armas visibles ante la cámara.</p></div>
 <div><span class="n">02</span><p class="big">Marca</p><p>Un recuadro rodea a la persona y otro al arma, para ver qué disparó la alerta.</p></div>
@@ -46,7 +48,7 @@
 <div><p class="eyebrow">Servicio 02 · Desarrollo con IA</p><h2>Su equipo entrega más, con el control en sus manos</h2><p class="t">Las tareas repetitivas consumen horas de ingeniería. El asistente se encarga de lo repetitivo y las personas aprueban cada cambio.</p>
 <ul class="ck"><li>Sugerencias de código dentro del editor que ya usa</li><li>Revisión automática antes de la revisión humana</li><li>Pruebas generadas y documentación al día</li><li>Usted define qué código puede analizarse</li></ul>
 <a class="btn" href="desarrollo-ia.html">Ver el servicio <span>→</span></a></div>
-<div class="pic"><img src="Media/codigo.png" onerror="this.onerror=null;this.src='img/codigo.svg'" alt="Editor de código con una sugerencia de IA y pruebas generadas" width="1600" height="1040" loading="lazy"></div></div></section>
+<div class="pic"><img src="Media/codigo.png" alt="Editor de código con una sugerencia de IA y pruebas generadas" width="1600" height="1040" loading="lazy"></div></div></section>
 <div class="impact"><div class="wrap"><h2>De la idea al código aprobado</h2><div class="g3">
 <div><span class="n">01</span><p class="big">Escribe</p><p>Propone y completa código mientras su equipo trabaja.</p></div>
 <div><span class="n">02</span><p class="big">Revisa</p><p>Señala errores y mejoras antes de que lleguen a producción.</p></div>
@@ -57,7 +59,7 @@
 <div><p class="eyebrow">Servicio 03 · Telemetría</p><h2>Vea el problema antes de que lo note su cliente</h2><p class="t">Reúna señales de dispositivos, servidores y aplicaciones en un solo panel, y deje que la IA señale lo que se sale de lo normal.</p>
 <ul class="ck"><li>Métricas y registros de equipos y aplicaciones</li><li>Paneles en tiempo real en PC, tablet y celular</li><li>Detección de anomalías con IA</li><li>Alertas por correo o chat</li></ul>
 <a class="btn" href="telemetria.html">Ver el servicio <span>→</span></a></div>
-<div class="pic"><img src="Media/telemetria.png" onerror="this.onerror=null;this.src='img/telemetria.svg'" alt="Panel con gráfico en tiempo real y una anomalía marcada" width="1600" height="1040" loading="lazy"></div></div></section>
+<div class="pic"><img src="Media/telemetria.png" alt="Panel con gráfico en tiempo real y una anomalía marcada" width="1600" height="1040" loading="lazy"></div></div></section>
 <div class="impact"><div class="wrap"><h2>Información útil, justo a tiempo</h2><div class="g3">
 <div><span class="n">01</span><p class="big">Recolecta</p><p>Datos continuos de sus sistemas y sensores.</p></div>
 <div><span class="n">02</span><p class="big">Detecta</p><p>La IA identifica comportamientos fuera de lo normal.</p></div>
@@ -68,7 +70,7 @@
 <div><p class="eyebrow">Servicio 04 · Flotas y activos</p><h2>Control total, aunque la unidad esté lejos</h2><p class="t">Gestione su logística de transporte y proteja sus activos valiosos desde cualquier PC, laptop, tablet o celular.</p>
 <ul class="ck"><li>Seguimiento en tiempo real de unidades, paquetes y activos</li><li>Monitoreo de sensores en unidades fijas o móviles</li><li>Bloqueo remoto de puertas y apagado remoto del motor</li><li>Control de entrada y salida de zonas de seguridad</li></ul>
 <a class="btn" href="flotas-activos.html">Ver el servicio <span>→</span></a></div>
-<div class="pic"><img src="Media/flotas.png" onerror="this.onerror=null;this.src='img/flotas.svg'" alt="Mapa con una ruta, una zona de seguridad y controles antirrobo" width="1600" height="1040" loading="lazy"></div></div></section>
+<div class="pic"><img src="Media/flotas.png" alt="Mapa con una ruta, una zona de seguridad y controles antirrobo" width="1600" height="1040" loading="lazy"></div></div></section>
 <div class="impact"><div class="wrap"><h2>Sepa dónde está y qué pasa con lo suyo</h2><div class="g3">
 <div><span class="n">01</span><p class="big">Ubica</p><p>Siga unidades y activos en tiempo real desde su pantalla.</p></div>
 <div><span class="n">02</span><p class="big">Protege</p><p>Bloquee puertas y apague el motor a distancia cuando haga falta.</p></div>
@@ -102,6 +104,9 @@
 </div>
 <div class="legal"><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a class="libro" href="libro-de-reclamaciones.html">Libro de Reclamaciones</a><span>© 2026 KreaLab TECH. Todos los derechos reservados.</span></div>
 </div></footer>
+<button type="button" class="scroll-top" id="scroll-top" aria-label="Volver al principio" title="Volver arriba" tabindex="-1" aria-hidden="true">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
 <script src="script.js"></script>
 </body>
 </html>
