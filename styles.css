@@ -1164,18 +1164,77 @@ details p {
   color: var(--ink2);
   margin: 0;
 }
+/* Páginas legales (Términos y Privacidad) */
+.legal-page .phero .wrap {
+  padding-bottom: 40px;
+}
+
+.legal-page section {
+  padding-top: 40px;
+}
+
 .prose {
   max-width: 760px;
-  margin-top: 32px;
+  margin-top: 0;
 }
+
 .prose h2 {
   font-size: 24px;
   margin: 40px 0 12px;
 }
+
+.prose h2:first-child {
+  margin-top: 0;
+}
+
 .prose p {
   color: var(--ink2);
   margin: 0;
 }
+
+@media (max-width: 640px) {
+  .legal-page .phero .wrap {
+    padding-bottom: 32px;
+  }
+
+  .legal-page section {
+    padding-top: 32px;
+  }
+}
+
+/* Libro de Reclamaciones */
+.libro-page .phero .wrap {
+  padding-bottom: 40px;
+}
+
+.libro-page section {
+  padding-top: 40px;
+}
+
+.libro-page .two {
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .libro-page .two {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .libro-page .phero .wrap {
+    padding-bottom: 32px;
+  }
+
+  .libro-page section {
+    padding-top: 32px;
+  }
+}
+
+
 /* formularios */
 .form {
   display: grid;
