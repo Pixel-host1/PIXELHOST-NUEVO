@@ -49,6 +49,7 @@
   --hero-btn-alt-border: #0f62fe;
   --hero-btn-alt-hover-bg: #0f62fe;
   --hero-btn-alt-hover-ink: #ffffff;
+  --hero-pill-bg: #ffffff;
 
   /* Sección Impacto y bloques */
   --impact-bg: #f4f4f4;
@@ -121,6 +122,7 @@
     --hero-btn-alt-border: #78a9ff;
     --hero-btn-alt-hover-bg: #78a9ff;
     --hero-btn-alt-hover-ink: #161616;
+    --hero-pill-bg: #262626;
 
     /* Sección Impacto y bloques */
     --impact-bg: #161616;
@@ -190,6 +192,7 @@
   --hero-btn-alt-border: #78a9ff;
   --hero-btn-alt-hover-bg: #78a9ff;
   --hero-btn-alt-hover-ink: #161616;
+  --hero-pill-bg: #262626;
 
   /* Sección Impacto y bloques */
   --impact-bg: #161616;
@@ -1598,7 +1601,9 @@ footer .flogo img {
 }
 
 .service-nav,
-.service-page .service-nav {
+.service-page .service-nav,
+.ia-nav,
+.ia-page .ia-nav {
   display: flex;
   flex-wrap: wrap;
   gap: 12px 24px;
@@ -1606,18 +1611,27 @@ footer .flogo img {
   font-size: 14px;
 }
 
-.service-page .service-nav a {
-  color: var(--hero-ink2);
+.service-page .service-nav a,
+.ia-page .ia-nav a {
+  color: var(--blue);
   padding-bottom: 6px;
-  border-bottom: 1px solid var(--hero-line);
+  border-bottom: 2px solid var(--blue);
+  text-decoration: none;
   transition:
     color 0.15s ease,
     border-color 0.15s ease;
 }
 
-.service-page .service-nav a:hover {
+.service-page .service-nav a:hover,
+.ia-page .ia-nav a:hover {
   color: var(--hero-ink);
-  border-color: var(--blue);
+  border-color: var(--hero-ink);
+}
+
+.service-page .service-nav a:focus-visible,
+.ia-page .ia-nav a:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
 }
 
 .service-page .btn {
@@ -1750,13 +1764,19 @@ footer .flogo img {
   border-color: var(--hero-line);
 }
 .phero .btn.alt {
+  background: transparent;
   color: var(--hero-btn-alt-color);
-  border-color: var(--hero-btn-alt-border);
+  border: 1px solid var(--hero-btn-alt-border);
 }
 .phero .btn.alt:hover {
   background: var(--hero-btn-alt-hover-bg);
   color: var(--hero-btn-alt-hover-ink);
 }
+.phero .btn.alt:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+.service-page ul.pills,
 ul.pills {
   list-style: none;
   display: flex;
@@ -1765,11 +1785,16 @@ ul.pills {
   padding: 0;
   margin: 32px 0 0;
 }
+
+.service-page ul.pills li,
 ul.pills li {
-  border: 1px solid var(--hero-line);
-  color: var(--hero-ink2);
-  font-size: 13px;
+  background: var(--hero-pill-bg, var(--layer));
+  border: 1px solid var(--line-strong);
+  color: var(--hero-ink);
+  font-size: 14px;
+  line-height: 1.4;
   padding: 6px 14px;
+  cursor: default;
 }
 .ic {
   width: 32px;
