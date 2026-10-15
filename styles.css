@@ -1564,6 +1564,28 @@ ul.ck li::before {
   font-size: 13px;
   margin: 20px 0 0;
 }
+.impact-media {
+  max-width: 1000px;
+  margin: 40px auto 0;
+  width: 100%;
+}
+.impact-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--impact-line, var(--hero-line));
+}
+.impact-caption {
+  color: var(--impact-ink2);
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 10px 0 0;
+}
+@media (max-width: 640px) {
+  .impact-media {
+    margin-top: 28px;
+  }
+}
 a.next {
   display: block;
   background: #0f62fe;
