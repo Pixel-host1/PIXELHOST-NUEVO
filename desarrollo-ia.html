@@ -37,15 +37,21 @@
     }
 
     .ia-nav a {
-      color: var(--hero-ink2);
+      color: var(--blue);
       padding-bottom: 6px;
-      border-bottom: 1px solid var(--hero-line);
+      border-bottom: 2px solid var(--blue);
+      text-decoration: none;
       transition: color .15s ease, border-color .15s ease;
     }
 
     .ia-nav a:hover {
       color: var(--hero-ink);
-      border-color: var(--blue);
+      border-color: var(--hero-ink);
+    }
+
+    .ia-nav a:focus-visible {
+      outline: 2px solid var(--blue);
+      outline-offset: 4px;
     }
 
     .ia-page .btn {
