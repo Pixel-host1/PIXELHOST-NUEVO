@@ -2190,3 +2190,219 @@ body.menu-open .scroll-top {
     scroll-behavior: auto !important;
   }
 }
+
+/* ---- Página Nosotros: Bloque Parte de Krea Lab y Principios ---- */
+.nosotros-hero .nosotros-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+  margin-top: 40px;
+}
+
+.nosotros-hero .kick {
+  margin: 0 0 14px;
+}
+
+.nosotros-hero .nosotros-intro h1 {
+  font-size: clamp(32px, 4.2vw, 50px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--hero-ink);
+  margin: 0 0 20px;
+  max-width: none;
+}
+
+.nosotros-hero .nosotros-desc {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--hero-ink2);
+  max-width: 560px;
+  margin: 0 0 40px;
+}
+
+.nosotros-lines-title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  margin: 0 0 16px;
+}
+
+.nosotros-tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.nosotros-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 22px;
+  border-radius: 9999px;
+  border: 1px solid var(--line-strong);
+  color: var(--ink2);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: transparent;
+  user-select: none;
+  line-height: 1.2;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+:root[data-theme="dark"] .nosotros-tag {
+  border-color: #3e3e3e;
+  color: var(--ink2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .nosotros-tag {
+    border-color: #3e3e3e;
+    color: var(--ink2);
+  }
+}
+
+.nosotros-tag.is-active {
+  border-color: var(--blue);
+  color: var(--ink);
+  background: rgba(15, 98, 254, 0.08);
+}
+
+:root[data-theme="dark"] .nosotros-tag.is-active {
+  border-color: var(--blue);
+  color: #ffffff;
+  background: rgba(120, 169, 255, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .nosotros-tag.is-active {
+    border-color: var(--blue);
+    color: #ffffff;
+    background: rgba(120, 169, 255, 0.12);
+  }
+}
+
+.nosotros-tag-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--blue);
+  margin-right: 8px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.nosotros-panel {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 38px 40px;
+  background: var(--bg);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+:root[data-theme="dark"] .nosotros-panel {
+  background: var(--layer);
+  border-color: var(--line);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .nosotros-panel {
+    background: var(--layer);
+    border-color: var(--line);
+  }
+}
+
+.nosotros-panel-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  margin: 0 0 28px;
+}
+
+.nosotros-principle + .nosotros-principle {
+  border-top: 1px solid var(--line);
+  padding-top: 26px;
+  margin-top: 26px;
+}
+
+.nosotros-principle h3 {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+
+.nosotros-hero .nosotros-panel p {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink2);
+  margin: 0;
+  max-width: none;
+}
+
+@media (max-width: 960px) {
+  .nosotros-hero .nosotros-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+    margin-top: 32px;
+  }
+
+  .nosotros-panel {
+    padding: 32px 28px;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .nosotros-hero .wrap {
+    padding-bottom: 56px;
+  }
+
+  .nosotros-hero .nosotros-intro h1 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .nosotros-hero .nosotros-desc {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .nosotros-tags {
+    gap: 8px;
+  }
+
+  .nosotros-tag {
+    padding: 7px 16px;
+    font-size: 12px;
+  }
+
+  .nosotros-panel {
+    padding: 24px 20px;
+  }
+
+  .nosotros-principle h3 {
+    font-size: 18px;
+  }
+
+  .nosotros-hero .nosotros-panel p {
+    font-size: 14px;
+  }
+}
