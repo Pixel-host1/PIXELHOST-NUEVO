@@ -2190,3 +2190,59 @@ body.menu-open .scroll-top {
     scroll-behavior: auto !important;
   }
 }
+
+/* ---- Nosotros: Parte de Krea Lab ---- */
+:root, :root[data-theme="light"] { --krea: #4d7c0f; --krea-dot: #65a30d; }
+:root[data-theme="dark"] { --krea: #bef264; --krea-dot: #a3e635; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --krea: #bef264; --krea-dot: #a3e635; }
+}
+.krea-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: start;
+}
+.krea .eyebrow { color: var(--ink2); font-size: 12px; letter-spacing: 1.6px; }
+.krea h2 { font-size: clamp(32px, 4vw, 48px); line-height: 1.12; margin: 0 0 20px; }
+.krea-txt { color: var(--ink2); font-size: 18px; line-height: 1.6; max-width: 560px; margin: 0 0 40px; }
+.krea .krea-sub { margin-bottom: 12px; }
+.krea-lines { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0 0 48px; }
+.krea-lines li {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 46px; padding: 0 28px;
+  border: 1px solid var(--line-strong); border-radius: 999px;
+  font-size: 14px; font-weight: 600; letter-spacing: 1px; color: var(--ink2);
+}
+.krea-lines li.on { border-color: var(--krea-dot); color: var(--ink); }
+.krea-lines li.on::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--krea-dot);
+}
+.krea-link {
+  display: inline-flex; align-items: center; gap: 40px;
+  padding: 0 0 14px; border-bottom: 1px solid var(--line-strong);
+  font-weight: 600; font-size: 15px; color: var(--ink);
+}
+.krea-link:hover { border-color: var(--krea-dot); color: var(--krea); }
+.krea-card {
+  background: var(--bg); border: 1px solid var(--line); border-radius: 16px;
+  padding: 40px 48px 32px;
+}
+.krea-card > div { padding: 24px 0; border-top: 1px solid var(--line); }
+.krea-card > .eyebrow + div { border-top: 0; padding-top: 12px; }
+.krea-card h3 { margin: 0 0 8px; font-weight: 500; font-size: 22px; line-height: 1.3; }
+.krea-card p:not(.eyebrow) { margin: 0; color: var(--ink2); font-size: 15px; }
+@media (max-width: 960px) {
+  .krea-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 560px) {
+  .krea-card { padding: 28px 20px 16px; }
+  .krea-lines { gap: 6px; }
+  .krea-lines li { padding: 0 12px; min-height: 40px; font-size: 13px; letter-spacing: 0.5px; }
+  .krea-lines li.on { gap: 6px; }
+}
+
+/* Libro: lista "Qué pasa después" */
+ul.steps-list { list-style: none; padding: 0; margin: 0; }
+ul.steps-list li { padding: 14px 0; border-top: 1px solid var(--line); font-size: 14px; color: var(--ink2); }
+ul.steps-list li:last-child { border-bottom: 1px solid var(--line); }

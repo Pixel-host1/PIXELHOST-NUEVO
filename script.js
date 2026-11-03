@@ -224,7 +224,7 @@
     });
   });
 
-  // ---- Formulario de contacto (demostración: arma un correo con contacto@krealab.example) ----
+  // ---- Formulario de contacto (demostración: arma un correo con contacto@tech.krealab.com.pe) ----
   var cf = document.querySelector('[data-form="contacto"]');
   if (cf)
     cf.addEventListener('submit', function (e) {
@@ -245,7 +245,7 @@
           '\n\n' +
           d.get('msg');
       document.getElementById('cmail').href =
-        'mailto:contacto@krealab.example?subject=' +
+        'mailto:contacto@tech.krealab.com.pe?subject=' +
         encodeURIComponent('Consulta: ' + d.get('interes')) +
         '&body=' +
         encodeURIComponent(body);
@@ -304,7 +304,7 @@
       document.getElementById('lmail').href =
         'mailto:' +
         encodeURIComponent(d.get('mail')) +
-        '?cc=contacto@krealab.example&subject=' +
+        '?cc=contacto@tech.krealab.com.pe&subject=' +
         encodeURIComponent('Hoja de Reclamación ' + n) +
         '&body=' +
         encodeURIComponent(txt);
